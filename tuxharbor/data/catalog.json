@@ -1,0 +1,3964 @@
+{
+  "schema_version": "1.0",
+  "updated_at": "2026-11-23",
+  "categories": {
+    "browsers": {
+      "label": "Web Browsers",
+      "icon": "globe"
+    },
+    "dev": {
+      "label": "Development & IDEs",
+      "icon": "code"
+    },
+    "runtimes": {
+      "label": "Runtimes & CLIs",
+      "icon": "terminal"
+    },
+    "communication": {
+      "label": "Communication",
+      "icon": "message"
+    },
+    "productivity": {
+      "label": "Office & Productivity",
+      "icon": "file"
+    },
+    "creative": {
+      "label": "Creative & Media",
+      "icon": "palette"
+    },
+    "utilities": {
+      "label": "Utilities & System",
+      "icon": "wrench"
+    },
+    "security": {
+      "label": "Security & Privacy",
+      "icon": "shield"
+    },
+    "gaming": {
+      "label": "Gaming",
+      "icon": "gamepad"
+    }
+  },
+  "apps": [
+    {
+      "id": "google-chrome",
+      "name": "Google Chrome",
+      "category": "browsers",
+      "status": "native",
+      "match_patterns": [
+        "google chrome",
+        "google.chrome"
+      ],
+      "linux_packages": {
+        "flatpak": "com.google.Chrome",
+        "official_url": "https://www.google.com/chrome/"
+      },
+      "summary": "Google Chrome is officially available for Linux from Google's website (and via community Flatpak packaging), supporting Chrome Sync and extensions."
+    },
+    {
+      "id": "firefox",
+      "name": "Mozilla Firefox",
+      "category": "browsers",
+      "status": "native",
+      "match_patterns": [
+        "mozilla firefox",
+        "mozilla.firefox"
+      ],
+      "linux_packages": {
+        "flatpak": "org.mozilla.firefox",
+        "apt": "firefox",
+        "dnf": "firefox",
+        "pacman": "firefox",
+        "zypper": "MozillaFirefox"
+      },
+      "summary": "First-class native Linux browser, often pre-installed on major distros."
+    },
+    {
+      "id": "brave",
+      "name": "Brave Browser",
+      "category": "browsers",
+      "status": "native",
+      "match_patterns": [
+        "brave",
+        "brave.brave"
+      ],
+      "linux_packages": {
+        "flatpak": "com.brave.Browser",
+        "official_url": "https://brave.com/linux/"
+      },
+      "summary": "Native Linux build available via Flatpak and official Brave repositories."
+    },
+    {
+      "id": "microsoft-edge",
+      "name": "Microsoft Edge",
+      "category": "browsers",
+      "status": "native",
+      "match_patterns": [
+        "microsoft edge",
+        "microsoft.edge"
+      ],
+      "exclude_patterns": [
+        "webview",
+        "update",
+        "game bar",
+        "gameassist"
+      ],
+      "linux_packages": {
+        "flatpak": "com.microsoft.Edge",
+        "official_url": "https://www.microsoft.com/edge"
+      },
+      "summary": "Microsoft Edge provides native Linux packages from Microsoft's website (also available via community Flatpak packaging) with Microsoft account sync."
+    },
+    {
+      "id": "vivaldi",
+      "name": "Vivaldi",
+      "category": "browsers",
+      "status": "native",
+      "match_patterns": [
+        "vivaldi",
+        "vivaldi.vivaldi"
+      ],
+      "linux_packages": {
+        "flatpak": "com.vivaldi.Vivaldi",
+        "official_url": "https://vivaldi.com/download/"
+      },
+      "summary": "Official Linux version with full workspace and tab syncing."
+    },
+    {
+      "id": "opera",
+      "name": "Opera",
+      "category": "browsers",
+      "status": "native",
+      "match_patterns": [
+        "opera stable",
+        "opera gx",
+        "opera.opera"
+      ],
+      "linux_packages": {
+        "flatpak": "com.opera.Opera"
+      },
+      "summary": "Opera runs natively on Linux (note: Opera GX is Windows/macOS only; standard Opera or Vivaldi are great on Linux)."
+    },
+    {
+      "id": "zen-browser",
+      "name": "Zen Browser",
+      "category": "browsers",
+      "status": "native",
+      "match_patterns": [
+        "zen browser",
+        "zen-team.zen-browser"
+      ],
+      "linux_packages": {
+        "flatpak": "app.zen_browser.zen"
+      },
+      "summary": "Fully native Linux support via Flatpak."
+    },
+    {
+      "id": "tor-browser",
+      "name": "Tor Browser",
+      "category": "browsers",
+      "status": "native",
+      "match_patterns": [
+        "tor browser",
+        "torproject.torbrowser"
+      ],
+      "linux_packages": {
+        "flatpak": "org.torproject.torbrowser-launcher",
+        "apt": "torbrowser-launcher",
+        "dnf": "torbrowser-launcher",
+        "pacman": "torbrowser-launcher"
+      },
+      "summary": "Tor Browser supports Linux natively via torproject.org or the Tor Browser Launcher package."
+    },
+    {
+      "id": "vscode",
+      "name": "Visual Studio Code",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "visual studio code",
+        "microsoft.visualstudiocode"
+      ],
+      "linux_packages": {
+        "flatpak": "com.visualstudio.code",
+        "pacman": "code",
+        "official_url": "https://code.visualstudio.com/docs/setup/linux"
+      },
+      "summary": "Visual Studio Code supports Linux natively (official packages from code.visualstudio.com; also available via community Flatpak packaging). TuxHarbor can export your extension list for reinstallation."
+    },
+    {
+      "id": "cursor",
+      "name": "Cursor IDE",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "cursor",
+        "anysphere.cursor"
+      ],
+      "exclude_patterns": [
+        "mouse",
+        "pointer",
+        "cursorfx"
+      ],
+      "linux_packages": {
+        "official_url": "https://www.cursor.com/downloads"
+      },
+      "summary": "Official Linux AppImage / deb / rpm packages available directly from cursor.com."
+    },
+    {
+      "id": "visual-studio-ide",
+      "name": "Visual Studio (Full IDE)",
+      "category": "dev",
+      "status": "alternative",
+      "match_patterns": [
+        "visual studio community",
+        "visual studio professional",
+        "visual studio enterprise",
+        "microsoft.visualstudio.20"
+      ],
+      "exclude_patterns": [
+        "code",
+        "redistributable",
+        "tools for",
+        "installer",
+        "build tools"
+      ],
+      "alternatives": [
+        {
+          "id": "jetbrains-rider",
+          "name": "JetBrains Rider",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.jetbrains.Rider"
+          },
+          "tagline": "Full-featured C#/.NET IDE for Linux (check JetBrains licensing for commercial vs. non-commercial eligibility)"
+        },
+        {
+          "id": "vscode-csharp",
+          "name": "VS Code + C# Dev Kit",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.visualstudio.code"
+          },
+          "tagline": "Lightweight code editor with Microsoft's .NET and C# extensions (subject to vendor extension terms)"
+        }
+      ],
+      "summary": "Microsoft Visual Studio IDE is Windows-only. For .NET/C# development on Linux, JetBrains Rider (check vendor licensing for non-commercial eligibility) or VS Code with .NET/C# extensions are widely used options."
+    },
+    {
+      "id": "intellij-idea",
+      "name": "JetBrains IntelliJ IDEA",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "intellij idea",
+        "jetbrains.intellijidea"
+      ],
+      "linux_packages": {
+        "flatpak": "com.jetbrains.IntelliJ-IDEA-Community",
+        "official_url": "https://www.jetbrains.com/toolbox-app/"
+      },
+      "summary": "Native Linux support via JetBrains Toolbox or Flatpak."
+    },
+    {
+      "id": "pycharm",
+      "name": "JetBrains PyCharm",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "pycharm",
+        "jetbrains.pycharm"
+      ],
+      "linux_packages": {
+        "flatpak": "com.jetbrains.PyCharm-Community",
+        "official_url": "https://www.jetbrains.com/toolbox-app/"
+      },
+      "summary": "Native Linux support via Flatpak or JetBrains Toolbox."
+    },
+    {
+      "id": "webstorm",
+      "name": "JetBrains WebStorm",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "webstorm",
+        "jetbrains.webstorm"
+      ],
+      "linux_packages": {
+        "flatpak": "com.jetbrains.WebStorm",
+        "official_url": "https://www.jetbrains.com/toolbox-app/"
+      },
+      "summary": "Native Linux support via JetBrains Toolbox or Flatpak (check JetBrains licensing for commercial vs. non-commercial terms)."
+    },
+    {
+      "id": "clion",
+      "name": "JetBrains CLion",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "clion",
+        "jetbrains.clion"
+      ],
+      "linux_packages": {
+        "flatpak": "com.jetbrains.CLion"
+      },
+      "summary": "Native Linux support with seamless GCC/Clang/CMake integration."
+    },
+    {
+      "id": "android-studio",
+      "name": "Android Studio",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "android studio",
+        "google.androidstudio"
+      ],
+      "linux_packages": {
+        "flatpak": "com.google.AndroidStudio"
+      },
+      "summary": "Native Linux support with fast KVM hardware-accelerated emulators."
+    },
+    {
+      "id": "sublime-text",
+      "name": "Sublime Text",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "sublime text",
+        "sublimehq.sublimetext"
+      ],
+      "linux_packages": {
+        "flatpak": "com.sublimetext.three"
+      },
+      "summary": "Fully native and ultra-fast on Linux."
+    },
+    {
+      "id": "notepad-plus-plus",
+      "name": "Notepad++",
+      "category": "dev",
+      "status": "alternative",
+      "match_patterns": [
+        "notepad++",
+        "notepad++.notepad++"
+      ],
+      "alternatives": [
+        {
+          "id": "kate",
+          "name": "Kate",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.kde.kate",
+            "apt": "kate",
+            "dnf": "kate",
+            "pacman": "kate",
+            "zypper": "kate"
+          },
+          "tagline": "Powerhouse text editor with splits, sessions, plugins, and instant startup"
+        },
+        {
+          "id": "geany",
+          "name": "Geany",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.geany.Geany",
+            "apt": "geany",
+            "dnf": "geany",
+            "pacman": "geany",
+            "zypper": "geany"
+          },
+          "tagline": "Ultra-lightweight editor & mini-IDE very close to Notepad++ feel"
+        },
+        {
+          "id": "notepadqq",
+          "name": "Notepadqq",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.notepadqq.Notepadqq",
+            "apt": "notepadqq",
+            "pacman": "notepadqq"
+          },
+          "tagline": "Open-source Linux text editor with an interface inspired by Notepad++"
+        }
+      ],
+      "summary": "Notepad++ is Windows-only, but Linux has outstanding fast editors with syntax highlighting, multi-tabs, and regex search."
+    },
+    {
+      "id": "github-desktop",
+      "name": "GitHub Desktop",
+      "category": "dev",
+      "status": "alternative",
+      "match_patterns": [
+        "github desktop",
+        "github.githubdesktop"
+      ],
+      "alternatives": [
+        {
+          "id": "github-desktop-linux",
+          "name": "GitHub Desktop (Community Linux Port)",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.github.shiftey.Desktop"
+          },
+          "tagline": "Unofficial community-maintained Linux port of the open-source GitHub Desktop codebase (not affiliated with GitHub, Inc.)"
+        },
+        {
+          "id": "gitkraken",
+          "name": "GitKraken",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.axosoft.GitKraken"
+          },
+          "tagline": "Visual Git client with rich branch graph"
+        },
+        {
+          "id": "lazygit",
+          "name": "Lazygit",
+          "recommended": false,
+          "type": "cli",
+          "packages": {
+            "pacman": "lazygit",
+            "dnf": "lazygit",
+            "official_url": "https://github.com/jesseduffield/lazygit"
+          },
+          "tagline": "Blazing-fast interactive terminal UI for Git"
+        }
+      ],
+      "summary": "GitHub Desktop does not offer an official Linux build. An unofficial community-maintained Linux port is available via Flatpak, alongside native Git clients such as GitKraken and Lazygit."
+    },
+    {
+      "id": "gitkraken",
+      "name": "GitKraken",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "gitkraken",
+        "axosoft.gitkraken"
+      ],
+      "linux_packages": {
+        "flatpak": "com.axosoft.GitKraken"
+      },
+      "summary": "Native Linux client via Flatpak."
+    },
+    {
+      "id": "postman",
+      "name": "Postman",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "postman",
+        "postman.postman"
+      ],
+      "linux_packages": {
+        "flatpak": "com.getpostman.Postman"
+      },
+      "summary": "Native Linux support via Flatpak (also check out Bruno — fast, offline, Git-friendly open-source alternative)."
+    },
+    {
+      "id": "insomnia",
+      "name": "Insomnia",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "insomnia",
+        "insomnia.insomnia"
+      ],
+      "linux_packages": {
+        "flatpak": "rest.insomnia.Insomnia"
+      },
+      "summary": "Native Linux API client via Flatpak."
+    },
+    {
+      "id": "bruno",
+      "name": "Bruno",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "bruno",
+        "bruno.bruno"
+      ],
+      "linux_packages": {
+        "flatpak": "com.usebruno.Bruno"
+      },
+      "summary": "Native Linux open-source API client via Flatpak."
+    },
+    {
+      "id": "docker-desktop",
+      "name": "Docker Desktop",
+      "category": "dev",
+      "status": "alternative",
+      "match_patterns": [
+        "docker desktop",
+        "docker.dockerdesktop"
+      ],
+      "alternatives": [
+        {
+          "id": "docker-engine",
+          "name": "Docker Engine + Compose",
+          "recommended": true,
+          "type": "cli",
+          "packages": {
+            "apt": "docker.io docker-compose-v2",
+            "dnf": "docker docker-compose",
+            "pacman": "docker docker-compose",
+            "zypper": "docker docker-compose"
+          },
+          "tagline": "Native Linux container engine running directly on the host Linux kernel"
+        },
+        {
+          "id": "podman-desktop",
+          "name": "Podman Desktop",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.podman_desktop.PodmanDesktop"
+          },
+          "tagline": "Open-source GUI container manager compatible with Dockerfiles & Compose"
+        }
+      ],
+      "summary": "Linux supports running containers directly on the Linux kernel via Docker Engine (without requiring a guest VM) or Podman Desktop for a graphical interface. Official Docker Desktop for Linux is also available from Docker's website."
+    },
+    {
+      "id": "dbeaver",
+      "name": "DBeaver",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "dbeaver",
+        "dbeaver.dbeaver"
+      ],
+      "linux_packages": {
+        "flatpak": "io.dbeaver.DBeaverCommunity"
+      },
+      "summary": "Native Linux database GUI via Flatpak."
+    },
+    {
+      "id": "heidisql",
+      "name": "HeidiSQL",
+      "category": "dev",
+      "status": "alternative",
+      "match_patterns": [
+        "heidisql",
+        "heidisql.heidisql"
+      ],
+      "alternatives": [
+        {
+          "id": "dbeaver-alt",
+          "name": "DBeaver Community",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.dbeaver.DBeaverCommunity"
+          },
+          "tagline": "Universal SQL client supporting MySQL, PostgreSQL, SQLite, MSSQL & more"
+        },
+        {
+          "id": "beekeeper-studio",
+          "name": "Beekeeper Studio",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.beekeeperstudio.Studio"
+          },
+          "tagline": "Sleek, fast modern SQL editor and database manager"
+        }
+      ],
+      "summary": "HeidiSQL is Windows-focused. DBeaver and Beekeeper Studio are modern cross-platform SQL clients on Linux."
+    },
+    {
+      "id": "mysql-workbench",
+      "name": "MySQL Workbench / pgAdmin",
+      "category": "dev",
+      "status": "alternative",
+      "match_patterns": [
+        "mysql workbench",
+        "pgadmin",
+        "oracle.mysqlworkbench"
+      ],
+      "alternatives": [
+        {
+          "id": "dbeaver-db",
+          "name": "DBeaver Community",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.dbeaver.DBeaverCommunity"
+          },
+          "tagline": "Works seamlessly with MySQL, MariaDB, PostgreSQL & SQLite"
+        },
+        {
+          "id": "beekeeper-db",
+          "name": "Beekeeper Studio",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.beekeeperstudio.Studio"
+          },
+          "tagline": "Clean, lightweight SQL GUI"
+        }
+      ],
+      "summary": "DBeaver Community and Beekeeper Studio are cross-distribution SQL clients on Linux (vendor Linux packages for MySQL Workbench and pgAdmin are also available separately)."
+    },
+    {
+      "id": "putty",
+      "name": "PuTTY / MobaXterm",
+      "category": "dev",
+      "status": "alternative",
+      "match_patterns": [
+        "putty",
+        "mobaxterm",
+        "simon.putty"
+      ],
+      "alternatives": [
+        {
+          "id": "remmina",
+          "name": "Remmina",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.remmina.Remmina",
+            "apt": "remmina",
+            "dnf": "remmina",
+            "pacman": "remmina"
+          },
+          "tagline": "All-in-one GUI client for SSH, RDP, VNC & SFTP"
+        },
+        {
+          "id": "openssh-client",
+          "name": "OpenSSH Client",
+          "recommended": false,
+          "type": "cli",
+          "packages": {
+            "apt": "openssh-client",
+            "dnf": "openssh-clients",
+            "pacman": "openssh",
+            "zypper": "openssh"
+          },
+          "tagline": "Native terminal SSH client (standard on Linux)"
+        }
+      ],
+      "summary": "Linux has OpenSSH built directly into every terminal! For GUI session management (SSH/RDP/VNC), Remmina is awesome."
+    },
+    {
+      "id": "winscp",
+      "name": "WinSCP",
+      "category": "dev",
+      "status": "alternative",
+      "match_patterns": [
+        "winscp",
+        "winscp.winscp"
+      ],
+      "alternatives": [
+        {
+          "id": "filezilla-alt",
+          "name": "FileZilla",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.filezillaproject.Filezilla",
+            "apt": "filezilla",
+            "dnf": "filezilla",
+            "pacman": "filezilla"
+          },
+          "tagline": "Dual-pane FTP, FTPS, and SFTP file transfer client"
+        }
+      ],
+      "summary": "Linux file managers (Dolphin/Nautilus) connect natively via sftp://, and FileZilla is available for dedicated FTP/SFTP workflows."
+    },
+    {
+      "id": "filezilla",
+      "name": "FileZilla",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "filezilla",
+        "timkosse.filezilla"
+      ],
+      "linux_packages": {
+        "flatpak": "org.filezillaproject.Filezilla",
+        "apt": "filezilla",
+        "dnf": "filezilla",
+        "pacman": "filezilla"
+      },
+      "summary": "Native Linux FTP/SFTP client."
+    },
+    {
+      "id": "windows-terminal",
+      "name": "Windows Terminal",
+      "category": "dev",
+      "status": "alternative",
+      "match_patterns": [
+        "windows terminal",
+        "microsoft.windowsterminal"
+      ],
+      "alternatives": [
+        {
+          "id": "kitty",
+          "name": "Kitty Terminal",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "apt": "kitty",
+            "dnf": "kitty",
+            "pacman": "kitty",
+            "zypper": "kitty"
+          },
+          "tagline": "GPU-accelerated terminal with tabs, splits, ligatures, and image preview"
+        },
+        {
+          "id": "wezterm",
+          "name": "WezTerm",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.wezfurlong.wezterm"
+          },
+          "tagline": "Modern cross-platform terminal with tabs and Lua config"
+        },
+        {
+          "id": "alacritty",
+          "name": "Alacritty",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "apt": "alacritty",
+            "dnf": "alacritty",
+            "pacman": "alacritty",
+            "zypper": "alacritty"
+          },
+          "tagline": "Minimalist, blazing-fast Rust terminal emulator"
+        }
+      ],
+      "summary": "Linux ships with great built-in terminals, plus ultra-fast GPU-accelerated power terminals like Kitty, WezTerm, or Alacritty."
+    },
+    {
+      "id": "neovim",
+      "name": "Neovim / Vim",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "neovim",
+        "neovim.neovim"
+      ],
+      "linux_packages": {
+        "apt": "neovim",
+        "dnf": "neovim",
+        "pacman": "neovim",
+        "zypper": "neovim"
+      },
+      "summary": "At home on Linux! Installs straight from any distro repository."
+    },
+    {
+      "id": "wireshark",
+      "name": "Wireshark",
+      "category": "dev",
+      "status": "native",
+      "match_patterns": [
+        "wireshark",
+        "wiresharkfoundation.wireshark"
+      ],
+      "linux_packages": {
+        "apt": "wireshark",
+        "dnf": "wireshark",
+        "pacman": "wireshark-qt",
+        "zypper": "wireshark"
+      },
+      "summary": "Native Linux network analyzer (remember to add your user to the wireshark group)."
+    },
+    {
+      "id": "figma",
+      "name": "Figma",
+      "category": "creative",
+      "status": "alternative",
+      "match_patterns": [
+        "figma",
+        "figma.figma"
+      ],
+      "alternatives": [
+        {
+          "id": "figma-web",
+          "name": "Figma Web (PWA)",
+          "recommended": true,
+          "type": "web",
+          "packages": {
+            "official_url": "https://www.figma.com"
+          },
+          "tagline": "Full official Figma app right in Chrome/Firefox (install as desktop web app)"
+        },
+        {
+          "id": "penpot",
+          "name": "Penpot",
+          "recommended": false,
+          "type": "web",
+          "packages": {
+            "official_url": "https://penpot.app"
+          },
+          "tagline": "Open-source Figma alternative with native CSS Grid & SVG"
+        }
+      ],
+      "summary": "Figma runs identically in any Linux browser (install as a Web App/PWA), or try Penpot for open-source UI design."
+    },
+    {
+      "id": "git",
+      "name": "Git",
+      "category": "runtimes",
+      "status": "native",
+      "exact_patterns": [
+        "git"
+      ],
+      "match_patterns": [
+        "git version",
+        "git for windows",
+        "git.git"
+      ],
+      "exclude_patterns": [
+        "github",
+        "gitkraken",
+        "gitlab",
+        "tortoisegit"
+      ],
+      "linux_packages": {
+        "apt": "git",
+        "dnf": "git",
+        "pacman": "git",
+        "zypper": "git"
+      },
+      "summary": "Git is natively packaged on all major Linux distributions."
+    },
+    {
+      "id": "github-cli",
+      "name": "GitHub CLI (gh)",
+      "category": "runtimes",
+      "status": "native",
+      "match_patterns": [
+        "github cli",
+        "github.cli"
+      ],
+      "linux_packages": {
+        "apt": "gh",
+        "dnf": "gh",
+        "pacman": "github-cli",
+        "zypper": "gh"
+      },
+      "summary": "Official GitHub CLI works natively across all Linux distros."
+    },
+    {
+      "id": "nodejs",
+      "name": "Node.js & npm",
+      "category": "runtimes",
+      "status": "native",
+      "match_patterns": [
+        "node.js",
+        "openjs.nodejs"
+      ],
+      "linux_packages": {
+        "apt": "nodejs npm",
+        "dnf": "nodejs npm",
+        "pacman": "nodejs npm",
+        "zypper": "nodejs npm"
+      },
+      "summary": "Native Linux Node.js & npm (tip: nvm or fnm also work great on Linux for switching Node versions)."
+    },
+    {
+      "id": "python",
+      "name": "Python 3",
+      "category": "runtimes",
+      "status": "native",
+      "match_patterns": [
+        "python 3.",
+        "python.python."
+      ],
+      "exclude_patterns": [
+        "launcher",
+        "anaconda",
+        "miniconda"
+      ],
+      "linux_packages": {
+        "apt": "python3 python3-pip python3-venv",
+        "dnf": "python3 python3-pip",
+        "pacman": "python python-pip",
+        "zypper": "python3 python3-pip"
+      },
+      "summary": "Python 3 is natively available across all major Linux distributions, along with pip and venv packages."
+    },
+    {
+      "id": "golang",
+      "name": "Go (Golang)",
+      "category": "runtimes",
+      "status": "native",
+      "match_patterns": [
+        "go programming language",
+        "golang.go"
+      ],
+      "linux_packages": {
+        "apt": "golang-go",
+        "dnf": "golang",
+        "pacman": "go",
+        "zypper": "go"
+      },
+      "summary": "First-class native Linux support."
+    },
+    {
+      "id": "rust",
+      "name": "Rust & Cargo",
+      "category": "runtimes",
+      "status": "native",
+      "match_patterns": [
+        "rustup",
+        "rustlang.rust"
+      ],
+      "linux_packages": {
+        "apt": "rustc cargo",
+        "dnf": "rust cargo",
+        "pacman": "rust",
+        "zypper": "rust cargo"
+      },
+      "summary": "First-class native Linux support (also installable via rustup)."
+    },
+    {
+      "id": "dotnet-sdk",
+      "name": ".NET SDK",
+      "category": "runtimes",
+      "status": "native",
+      "match_patterns": [
+        "microsoft .net sdk",
+        "microsoft.dotnet.sdk"
+      ],
+      "linux_packages": {
+        "apt": "dotnet-sdk-8.0",
+        "dnf": "dotnet-sdk-8.0",
+        "pacman": "dotnet-sdk",
+        "zypper": "dotnet-sdk-8.0",
+        "official_url": "https://learn.microsoft.com/dotnet/core/install/linux"
+      },
+      "summary": "Modern .NET (ASP.NET Core, Console, Blazor, Avalonia) runs natively on Linux. Note: WPF and WinForms are Windows-only."
+    },
+    {
+      "id": "java-jdk",
+      "name": "Java / OpenJDK",
+      "category": "runtimes",
+      "status": "native",
+      "match_patterns": [
+        "jdk",
+        "temurin",
+        "openjdk",
+        "java se",
+        "oracle.jdk",
+        "eclipseadoptium"
+      ],
+      "linux_packages": {
+        "apt": "default-jdk",
+        "dnf": "java-21-openjdk-devel",
+        "pacman": "jdk-openjdk",
+        "zypper": "java-21-openjdk-devel"
+      },
+      "summary": "OpenJDK installs directly from every Linux package manager."
+    },
+    {
+      "id": "ffmpeg",
+      "name": "FFmpeg",
+      "category": "runtimes",
+      "status": "native",
+      "match_patterns": [
+        "ffmpeg",
+        "gyan.ffmpeg"
+      ],
+      "linux_packages": {
+        "apt": "ffmpeg",
+        "dnf": "ffmpeg",
+        "pacman": "ffmpeg",
+        "zypper": "ffmpeg"
+      },
+      "summary": "Native Linux media CLI powerhouse."
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "category": "communication",
+      "status": "native",
+      "match_patterns": [
+        "discord",
+        "discord.discord"
+      ],
+      "linux_packages": {
+        "flatpak": "com.discordapp.Discord"
+      },
+      "summary": "Discord provides a native Linux client (available from discord.com and via community Flatpak packaging)."
+    },
+    {
+      "id": "slack",
+      "name": "Slack",
+      "category": "communication",
+      "status": "native",
+      "match_patterns": [
+        "slack",
+        "slacktechnologies.slack"
+      ],
+      "linux_packages": {
+        "flatpak": "com.slack.Slack"
+      },
+      "summary": "Slack provides native Linux packages from slack.com (also available via community Flatpak packaging)."
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram Desktop",
+      "category": "communication",
+      "status": "native",
+      "match_patterns": [
+        "telegram desktop",
+        "telegram.telegramdesktop"
+      ],
+      "linux_packages": {
+        "flatpak": "org.telegram.desktop",
+        "apt": "telegram-desktop",
+        "pacman": "telegram-desktop"
+      },
+      "summary": "Official, ultra-fast native Linux Telegram client."
+    },
+    {
+      "id": "whatsapp",
+      "name": "WhatsApp",
+      "category": "communication",
+      "status": "alternative",
+      "match_patterns": [
+        "whatsapp",
+        "9nksqgp7f2nh"
+      ],
+      "alternatives": [
+        {
+          "id": "zapzap",
+          "name": "ZapZap",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.rtosta.zapzap"
+          },
+          "tagline": "Unofficial third-party desktop wrapper for WhatsApp Web with tray icon and notifications (not affiliated with WhatsApp/Meta)"
+        },
+        {
+          "id": "whatsapp-web",
+          "name": "WhatsApp Web",
+          "recommended": false,
+          "type": "web",
+          "packages": {
+            "official_url": "https://web.whatsapp.com"
+          },
+          "tagline": "Official browser experience — zero extra install"
+        }
+      ],
+      "summary": "WhatsApp does not offer an official native Linux desktop client. WhatsApp Web runs directly in Linux browsers, and ZapZap is an unofficial third-party desktop wrapper for WhatsApp Web."
+    },
+    {
+      "id": "microsoft-teams",
+      "name": "Microsoft Teams",
+      "category": "communication",
+      "status": "alternative",
+      "match_patterns": [
+        "microsoft teams",
+        "microsoft.teams"
+      ],
+      "exclude_patterns": [
+        "meeting add-in"
+      ],
+      "alternatives": [
+        {
+          "id": "teams-for-linux",
+          "name": "Teams for Linux",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.github.IsmaelMartinez.teams_for_linux"
+          },
+          "tagline": "Unofficial community open-source desktop wrapper for Microsoft Teams Web (not affiliated with Microsoft)"
+        },
+        {
+          "id": "teams-web",
+          "name": "Microsoft Teams Web",
+          "recommended": false,
+          "type": "web",
+          "packages": {
+            "official_url": "https://teams.microsoft.com"
+          },
+          "tagline": "Official Teams Web App in Chrome/Edge"
+        }
+      ],
+      "summary": "Microsoft Teams is officially accessible on Linux via Microsoft Teams Web in supported browsers. Teams for Linux is an unofficial community open-source Electron wrapper for the web app."
+    },
+    {
+      "id": "zoom",
+      "name": "Zoom Workplace",
+      "category": "communication",
+      "status": "native",
+      "match_patterns": [
+        "zoom workplace",
+        "zoom(",
+        "zoom.zoom"
+      ],
+      "linux_packages": {
+        "flatpak": "us.zoom.Zoom"
+      },
+      "summary": "Zoom offers native Linux packages on zoom.us (also available via community Flatpak packaging)."
+    },
+    {
+      "id": "signal",
+      "name": "Signal Desktop",
+      "category": "communication",
+      "status": "native",
+      "match_patterns": [
+        "signal",
+        "openwhispersystems.signal"
+      ],
+      "linux_packages": {
+        "flatpak": "org.signal.Signal"
+      },
+      "summary": "Signal Desktop supports Linux natively via Signal's official repository (also available via community Flatpak packaging)."
+    },
+    {
+      "id": "thunderbird",
+      "name": "Mozilla Thunderbird",
+      "category": "communication",
+      "status": "native",
+      "match_patterns": [
+        "thunderbird",
+        "mozilla.thunderbird"
+      ],
+      "linux_packages": {
+        "flatpak": "org.mozilla.Thunderbird",
+        "apt": "thunderbird",
+        "dnf": "thunderbird",
+        "pacman": "thunderbird"
+      },
+      "summary": "Native Linux email & calendar client."
+    },
+    {
+      "id": "viber",
+      "name": "Viber",
+      "category": "communication",
+      "status": "native",
+      "match_patterns": [
+        "viber",
+        "viber.viber"
+      ],
+      "linux_packages": {
+        "flatpak": "com.viber.Viber"
+      },
+      "summary": "Available on Linux via Flatpak."
+    },
+    {
+      "id": "microsoft-office",
+      "name": "Microsoft Office / 365",
+      "category": "productivity",
+      "status": "alternative",
+      "match_patterns": [
+        "microsoft 365",
+        "microsoft office",
+        "office 16",
+        "microsoft.office",
+        "o365proplusretail",
+        "o365businessretail",
+        "o365homeretail"
+      ],
+      "exclude_patterns": [
+        "click-to-run",
+        "mui",
+        "proofing",
+        "visual studio",
+        "local ai manager",
+        "companion",
+        "actionsserver",
+        "pushnotification",
+        "filter pack"
+      ],
+      "alternatives": [
+        {
+          "id": "onlyoffice",
+          "name": "ONLYOFFICE Desktop",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.onlyoffice.desktopeditors"
+          },
+          "tagline": "Open-source office suite focused on DOCX/XLSX/PPTX compatibility and a tabbed interface"
+        },
+        {
+          "id": "libreoffice",
+          "name": "LibreOffice",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.libreoffice.LibreOffice",
+            "apt": "libreoffice",
+            "dnf": "libreoffice",
+            "pacman": "libreoffice-fresh"
+          },
+          "tagline": "Feature-rich open-source office suite with broad document format and RTL language support"
+        },
+        {
+          "id": "office-web",
+          "name": "Microsoft 365 Web",
+          "recommended": false,
+          "type": "web",
+          "packages": {
+            "official_url": "https://www.office.com"
+          },
+          "tagline": "Official Word, Excel & PowerPoint right in your browser"
+        }
+      ],
+      "summary": "Microsoft 365 desktop applications are not natively available on Linux. Microsoft 365 Web runs in supported Linux browsers, while ONLYOFFICE Desktop Editors and LibreOffice are open-source office suites with DOCX/XLSX/PPTX support."
+    },
+    {
+      "id": "libreoffice",
+      "name": "LibreOffice",
+      "category": "productivity",
+      "status": "native",
+      "match_patterns": [
+        "libreoffice",
+        "thedocumentfoundation.libreoffice"
+      ],
+      "linux_packages": {
+        "flatpak": "org.libreoffice.LibreOffice",
+        "apt": "libreoffice",
+        "dnf": "libreoffice",
+        "pacman": "libreoffice-fresh"
+      },
+      "summary": "First-class native Linux office suite."
+    },
+    {
+      "id": "onlyoffice",
+      "name": "ONLYOFFICE Desktop Editors",
+      "category": "productivity",
+      "status": "native",
+      "match_patterns": [
+        "onlyoffice",
+        "onlyoffice.desktopeditors"
+      ],
+      "linux_packages": {
+        "flatpak": "org.onlyoffice.desktopeditors"
+      },
+      "summary": "Official native Linux suite via Flatpak."
+    },
+    {
+      "id": "obsidian",
+      "name": "Obsidian",
+      "category": "productivity",
+      "status": "native",
+      "match_patterns": [
+        "obsidian",
+        "obsidian.obsidian"
+      ],
+      "linux_packages": {
+        "flatpak": "md.obsidian.Obsidian"
+      },
+      "summary": "Obsidian offers official native Linux builds on obsidian.md (also available via community Flatpak packaging) — copy your Markdown vault folder to migrate."
+    },
+    {
+      "id": "notion",
+      "name": "Notion",
+      "category": "productivity",
+      "status": "alternative",
+      "match_patterns": [
+        "notion",
+        "notion.notion"
+      ],
+      "alternatives": [
+        {
+          "id": "notion-web",
+          "name": "Notion Web (PWA)",
+          "recommended": true,
+          "type": "web",
+          "packages": {
+            "official_url": "https://www.notion.so"
+          },
+          "tagline": "Identical official Notion workspace in your browser"
+        },
+        {
+          "id": "obsidian-alt",
+          "name": "Obsidian",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "md.obsidian.Obsidian"
+          },
+          "tagline": "Fast, local Markdown knowledge base with huge plugin ecosystem"
+        },
+        {
+          "id": "appflowy",
+          "name": "AppFlowy",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.appflowy.AppFlowy"
+          },
+          "tagline": "Open-source Notion alternative with databases & kanban"
+        }
+      ],
+      "summary": "Notion works smoothly in Linux browsers (can be installed as a Web App), or switch to local-first open-source notes with Obsidian or AppFlowy."
+    },
+    {
+      "id": "onenote-evernote",
+      "name": "OneNote / Evernote",
+      "category": "productivity",
+      "status": "alternative",
+      "match_patterns": [
+        "onenote",
+        "evernote"
+      ],
+      "alternatives": [
+        {
+          "id": "joplin",
+          "name": "Joplin",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "net.cozic.joplin_desktop"
+          },
+          "tagline": "Open-source notebook app with E2E encrypted sync & Evernote import"
+        },
+        {
+          "id": "xournalpp",
+          "name": "Xournal++",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.github.xournalpp.xournalpp"
+          },
+          "tagline": "Great for handwritten notes, stylus support, and annotating PDFs"
+        }
+      ],
+      "summary": "Joplin, Obsidian, and Xournal++ (for stylus/PDF annotation) are top-tier Linux note apps."
+    },
+    {
+      "id": "pdf-reader",
+      "name": "Adobe Acrobat / Foxit / SumatraPDF",
+      "category": "productivity",
+      "status": "alternative",
+      "match_patterns": [
+        "adobe acrobat",
+        "foxit",
+        "sumatrapdf",
+        "nitro pdf"
+      ],
+      "alternatives": [
+        {
+          "id": "okular",
+          "name": "Okular",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.kde.okular",
+            "apt": "okular",
+            "dnf": "okular",
+            "pacman": "okular"
+          },
+          "tagline": "Fast universal PDF reader with annotations, forms, and digital signatures"
+        },
+        {
+          "id": "pdfarranger",
+          "name": "PDF Arranger",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.github.jeromerobert.pdfarranger"
+          },
+          "tagline": "Merge, split, rotate, and rearrange PDF pages visually"
+        }
+      ],
+      "summary": "Linux has fast native PDF readers with annotations (Okular) and easy page splitting/merging (PDF Arranger)."
+    },
+    {
+      "id": "calibre",
+      "name": "Calibre",
+      "category": "productivity",
+      "status": "native",
+      "match_patterns": [
+        "calibre",
+        "calibre.calibre"
+      ],
+      "linux_packages": {
+        "flatpak": "com.calibre_ebook.calibre"
+      },
+      "summary": "Native Linux e-book manager."
+    },
+    {
+      "id": "anki",
+      "name": "Anki",
+      "category": "productivity",
+      "status": "native",
+      "match_patterns": [
+        "anki",
+        "anki.anki"
+      ],
+      "linux_packages": {
+        "flatpak": "net.ankiweb.Anki"
+      },
+      "summary": "Anki offers native Linux packages on apps.ankiweb.net (also available via community Flatpak packaging)."
+    },
+    {
+      "id": "photoshop",
+      "name": "Adobe Photoshop",
+      "category": "creative",
+      "status": "alternative",
+      "match_patterns": [
+        "adobe photoshop"
+      ],
+      "alternatives": [
+        {
+          "id": "gimp-alt",
+          "name": "GIMP",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.gimp.GIMP",
+            "apt": "gimp",
+            "dnf": "gimp",
+            "pacman": "gimp"
+          },
+          "tagline": "Powerful open-source image editor with layers, masks & PSD support"
+        },
+        {
+          "id": "krita-alt",
+          "name": "Krita",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.kde.krita"
+          },
+          "tagline": "Pro-grade digital painting & graphics editor with strong PSD support"
+        },
+        {
+          "id": "photopea",
+          "name": "Photopea (Web)",
+          "recommended": false,
+          "type": "web",
+          "packages": {
+            "official_url": "https://www.photopea.com"
+          },
+          "tagline": "Browser-based raster and vector image editor with PSD file support and familiar keyboard shortcuts"
+        }
+      ],
+      "summary": "Adobe Photoshop and Creative Cloud desktop applications are not natively supported on Linux. GIMP, Krita, and Photopea (web-based editor with PSD support) are widely used alternatives for many image-editing workflows."
+    },
+    {
+      "id": "illustrator",
+      "name": "Adobe Illustrator",
+      "category": "creative",
+      "status": "alternative",
+      "match_patterns": [
+        "adobe illustrator"
+      ],
+      "alternatives": [
+        {
+          "id": "inkscape-alt",
+          "name": "Inkscape",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.inkscape.Inkscape",
+            "apt": "inkscape",
+            "dnf": "inkscape",
+            "pacman": "inkscape"
+          },
+          "tagline": "Professional vector graphics editor (SVG, PDF, AI import)"
+        }
+      ],
+      "summary": "Adobe Illustrator is not natively available on Linux. Inkscape is a widely used open-source vector graphics editor supporting SVG, PDF, and common vector formats."
+    },
+    {
+      "id": "premiere-pro",
+      "name": "Adobe Premiere Pro / CapCut",
+      "category": "creative",
+      "status": "alternative",
+      "match_patterns": [
+        "adobe premiere",
+        "capcut",
+        "filmora",
+        "camtasia",
+        "sony vegas",
+        "vegas pro"
+      ],
+      "alternatives": [
+        {
+          "id": "kdenlive",
+          "name": "Kdenlive",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.kde.kdenlive",
+            "apt": "kdenlive",
+            "dnf": "kdenlive",
+            "pacman": "kdenlive"
+          },
+          "tagline": "Feature-packed multi-track video editor with effects & hardware acceleration"
+        },
+        {
+          "id": "davinci-resolve-alt",
+          "name": "DaVinci Resolve (Linux)",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "official_url": "https://www.blackmagicdesign.com/products/davinciresolve"
+          },
+          "tagline": "Professional film editing, color grading & VFX suite (official Linux version)"
+        },
+        {
+          "id": "shotcut-alt",
+          "name": "Shotcut",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.shotcut.Shotcut"
+          },
+          "tagline": "Simple, clean cross-platform video editor"
+        }
+      ],
+      "summary": "These Windows/macOS video editors are not natively available on Linux. Kdenlive and Shotcut are open-source Linux video editors, and Blackmagic Design offers a native Linux edition of DaVinci Resolve."
+    },
+    {
+      "id": "lightroom",
+      "name": "Adobe Lightroom",
+      "category": "creative",
+      "status": "alternative",
+      "match_patterns": [
+        "adobe lightroom"
+      ],
+      "alternatives": [
+        {
+          "id": "darktable",
+          "name": "Darktable",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.darktable.Darktable"
+          },
+          "tagline": "Pro RAW photo editor & photography workflow (closest to Lightroom)"
+        },
+        {
+          "id": "rawtherapee",
+          "name": "RawTherapee",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.rawtherapee.RawTherapee"
+          },
+          "tagline": "High-precision RAW processing engine"
+        }
+      ],
+      "summary": "Darktable and RawTherapee are pro-grade RAW photo workflow & color tools on Linux."
+    },
+    {
+      "id": "after-effects",
+      "name": "Adobe After Effects",
+      "category": "creative",
+      "status": "attention",
+      "match_patterns": [
+        "adobe after effects"
+      ],
+      "alternatives": [
+        {
+          "id": "blender-vfx",
+          "name": "Blender",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.blender.Blender"
+          },
+          "tagline": "3D, motion graphics, and video compositing powerhouse"
+        }
+      ],
+      "summary": "Adobe After Effects is not natively available on Linux. Blender and DaVinci Resolve Fusion offer Linux-native motion graphics and compositing workflows, though existing After Effects project files may require a supported Windows environment."
+    },
+    {
+      "id": "paint-net",
+      "name": "Paint.NET",
+      "category": "creative",
+      "status": "alternative",
+      "match_patterns": [
+        "paint.net",
+        "dotpdn.paintdotnet"
+      ],
+      "alternatives": [
+        {
+          "id": "pinta",
+          "name": "Pinta",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.github.PintaProject.Pinta"
+          },
+          "tagline": "Lightweight open-source image editor with layers, effects, and a straightforward interface"
+        },
+        {
+          "id": "gimp-paint",
+          "name": "GIMP",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.gimp.GIMP"
+          },
+          "tagline": "Advanced image editing when you need extra power"
+        }
+      ],
+      "summary": "Paint.NET is Windows-only. Pinta is an open-source Linux image editor offering a lightweight multi-layer workflow, and GIMP provides advanced editing features."
+    },
+    {
+      "id": "affinity-suite",
+      "name": "Affinity Photo / Designer",
+      "category": "creative",
+      "status": "alternative",
+      "match_patterns": [
+        "affinity photo",
+        "affinity designer",
+        "affinity publisher"
+      ],
+      "alternatives": [
+        {
+          "id": "krita-aff",
+          "name": "Krita",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.kde.krita"
+          },
+          "tagline": "High-end illustration and photo retouching"
+        },
+        {
+          "id": "inkscape-aff",
+          "name": "Inkscape",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.inkscape.Inkscape"
+          },
+          "tagline": "Vector design alternative to Affinity Designer"
+        }
+      ],
+      "summary": "Affinity apps aren't native on Linux yet. Use Krita/GIMP (photo) and Inkscape (vector), or Scribus (publishing)."
+    },
+    {
+      "id": "blender",
+      "name": "Blender",
+      "category": "creative",
+      "status": "native",
+      "match_patterns": [
+        "blender",
+        "blenderfoundation.blender"
+      ],
+      "linux_packages": {
+        "flatpak": "org.blender.Blender"
+      },
+      "summary": "Official native Linux support via Flatpak or blender.org."
+    },
+    {
+      "id": "gimp",
+      "name": "GIMP",
+      "category": "creative",
+      "status": "native",
+      "match_patterns": [
+        "gimp",
+        "gimp.gimp"
+      ],
+      "linux_packages": {
+        "flatpak": "org.gimp.GIMP",
+        "apt": "gimp",
+        "dnf": "gimp",
+        "pacman": "gimp"
+      },
+      "summary": "Native Linux image editor."
+    },
+    {
+      "id": "inkscape",
+      "name": "Inkscape",
+      "category": "creative",
+      "status": "native",
+      "match_patterns": [
+        "inkscape",
+        "inkscape.inkscape"
+      ],
+      "linux_packages": {
+        "flatpak": "org.inkscape.Inkscape"
+      },
+      "summary": "Native Linux vector graphics editor."
+    },
+    {
+      "id": "krita",
+      "name": "Krita",
+      "category": "creative",
+      "status": "native",
+      "match_patterns": [
+        "krita",
+        "kde.krita"
+      ],
+      "linux_packages": {
+        "flatpak": "org.kde.krita"
+      },
+      "summary": "Native Linux digital painting studio."
+    },
+    {
+      "id": "audacity",
+      "name": "Audacity",
+      "category": "creative",
+      "status": "native",
+      "match_patterns": [
+        "audacity",
+        "audacity.audacity"
+      ],
+      "linux_packages": {
+        "flatpak": "org.audacityteam.Audacity"
+      },
+      "summary": "Native Linux audio editor."
+    },
+    {
+      "id": "obs-studio",
+      "name": "OBS Studio",
+      "category": "creative",
+      "status": "native",
+      "match_patterns": [
+        "obs studio",
+        "obsproject.obsstudio"
+      ],
+      "linux_packages": {
+        "flatpak": "com.obsproject.Studio"
+      },
+      "summary": "First-class native Linux streaming & screen recording (full PipeWire/Wayland support)."
+    },
+    {
+      "id": "vlc",
+      "name": "VLC Media Player",
+      "category": "creative",
+      "status": "native",
+      "match_patterns": [
+        "vlc media player",
+        "videolan.vlc"
+      ],
+      "linux_packages": {
+        "flatpak": "org.videolan.VLC",
+        "apt": "vlc",
+        "dnf": "vlc",
+        "pacman": "vlc"
+      },
+      "summary": "Native Linux media player supporting virtually every format."
+    },
+    {
+      "id": "potplayer-mpchc",
+      "name": "PotPlayer / MPC-HC / KMPlayer",
+      "category": "creative",
+      "status": "alternative",
+      "match_patterns": [
+        "potplayer",
+        "mpc-hc",
+        "mpc-be",
+        "kmplayer",
+        "gom player"
+      ],
+      "alternatives": [
+        {
+          "id": "haruna",
+          "name": "Haruna Video Player",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.kde.haruna"
+          },
+          "tagline": "Modern mpv-based video player with clean UI & subtitle options"
+        },
+        {
+          "id": "vlc-alt",
+          "name": "VLC Media Player",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.videolan.VLC"
+          },
+          "tagline": "Plays every video & audio format effortlessly"
+        },
+        {
+          "id": "mpv-alt",
+          "name": "mpv",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "apt": "mpv",
+            "dnf": "mpv",
+            "pacman": "mpv",
+            "flatpak": "io.mpv.Mpv"
+          },
+          "tagline": "Minimalist, ultra-lightweight keyboard-driven media player"
+        }
+      ],
+      "summary": "Haruna, VLC, and mpv are hardware-accelerated Linux video players with broad codec and international/RTL subtitle support."
+    },
+    {
+      "id": "handbrake",
+      "name": "HandBrake",
+      "category": "creative",
+      "status": "native",
+      "match_patterns": [
+        "handbrake",
+        "handbrake.handbrake"
+      ],
+      "linux_packages": {
+        "flatpak": "fr.handbrake.ghb"
+      },
+      "summary": "Native Linux video transcoder."
+    },
+    {
+      "id": "spotify",
+      "name": "Spotify",
+      "category": "creative",
+      "status": "native",
+      "match_patterns": [
+        "spotify",
+        "spotify.spotify"
+      ],
+      "linux_packages": {
+        "flatpak": "com.spotify.Client"
+      },
+      "summary": "Spotify provides a native Linux desktop client (available via Spotify's official repository and community Flatpak packaging)."
+    },
+    {
+      "id": "itunes-musicbee",
+      "name": "iTunes / MusicBee / foobar2000",
+      "category": "creative",
+      "status": "alternative",
+      "match_patterns": [
+        "itunes",
+        "musicbee",
+        "foobar2000",
+        "winamp"
+      ],
+      "alternatives": [
+        {
+          "id": "strawberry",
+          "name": "Strawberry Music Player",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.strawberrymusicplayer.strawberry"
+          },
+          "tagline": "Rich local audio collection player supporting FLAC, MP3 & playlists"
+        },
+        {
+          "id": "rhythmbox",
+          "name": "Rhythmbox",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.gnome.Rhythmbox3"
+          },
+          "tagline": "Clean, classic Linux music library manager"
+        }
+      ],
+      "summary": "Strawberry is a fantastic local music library player for Linux (and Apple Music Web works in the browser)."
+    },
+    {
+      "id": "fl-studio-ableton",
+      "name": "FL Studio / Ableton Live",
+      "category": "creative",
+      "status": "attention",
+      "match_patterns": [
+        "fl studio",
+        "ableton live",
+        "cubase",
+        "pro tools"
+      ],
+      "alternatives": [
+        {
+          "id": "ardour",
+          "name": "Ardour",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.ardour.Ardour"
+          },
+          "tagline": "Full open-source digital audio workstation (DAW)"
+        },
+        {
+          "id": "lmms",
+          "name": "LMMS",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.lmms.LMMS"
+          },
+          "tagline": "Pattern-based beat & synth studio inspired by FL Studio"
+        }
+      ],
+      "summary": "These DAWs and Windows-only VST plugins are not natively supported on Linux. Commercial Linux-native DAWs (such as REAPER and Bitwig Studio) and open-source DAWs (such as Ardour and LMMS) are available on Linux."
+    },
+    {
+      "id": "archivers",
+      "name": "7-Zip / WinRAR / WinZip",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "7-zip",
+        "winrar",
+        "winzip",
+        "7zip.7zip",
+        "rarlab.winrar"
+      ],
+      "alternatives": [
+        {
+          "id": "peazip",
+          "name": "PeaZip",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.github.peazip.PeaZip"
+          },
+          "tagline": "Open-source archive manager supporting 7Z, RAR, ZIP, TAR & encryption"
+        },
+        {
+          "id": "p7zip-cli",
+          "name": "7-Zip CLI (p7zip)",
+          "recommended": false,
+          "type": "cli",
+          "packages": {
+            "apt": "p7zip-full unrar-free",
+            "dnf": "p7zip p7zip-plugins",
+            "pacman": "7zip unrar",
+            "zypper": "7zip"
+          },
+          "tagline": "Command-line 7z support integrated with desktop archive tools"
+        }
+      ],
+      "summary": "Linux file managers natively open ZIP/TAR/7Z/RAR, and PeaZip gives a full power-user GUI supporting 200+ archive formats."
+    },
+    {
+      "id": "sharex-screenshots",
+      "name": "ShareX / Greenshot / Lightshot",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "sharex",
+        "greenshot",
+        "lightshot",
+        "snagit",
+        "sharex.sharex"
+      ],
+      "alternatives": [
+        {
+          "id": "flameshot",
+          "name": "Flameshot",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.flameshot.Flameshot",
+            "apt": "flameshot",
+            "dnf": "flameshot",
+            "pacman": "flameshot"
+          },
+          "tagline": "Fast screenshot capture with arrows, blur, numbers, and instant copy"
+        }
+      ],
+      "summary": "Flameshot is the beloved Linux screenshot tool with instant arrows, blur, highlights, text annotations, and clipboard copy!"
+    },
+    {
+      "id": "everything-search",
+      "name": "Everything Search",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "everything 1.",
+        "voidtools.everything"
+      ],
+      "alternatives": [
+        {
+          "id": "fsearch",
+          "name": "FSearch",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.github.cboxdoerfer.FSearch"
+          },
+          "tagline": "Fast index-based filename search utility for Linux"
+        }
+      ],
+      "summary": "Everything is Windows-only. FSearch provides fast, index-based filename search on Linux."
+    },
+    {
+      "id": "powertoys",
+      "name": "Microsoft PowerToys",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "powertoys",
+        "microsoft.powertoys"
+      ],
+      "alternatives": [
+        {
+          "id": "copyq",
+          "name": "CopyQ Clipboard Manager",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.github.hluk.copyq"
+          },
+          "tagline": "Advanced searchable clipboard history & snippets"
+        },
+        {
+          "id": "espanso-pt",
+          "name": "Espanso",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "official_url": "https://espanso.org/docs/install/linux/"
+          },
+          "tagline": "Cross-platform text expander & snippet automation"
+        }
+      ],
+      "summary": "Most PowerToys features (window tiling, app launcher, color picker, clipboard history) are already built into KDE Plasma & GNOME! Add Espanso for text expansion."
+    },
+    {
+      "id": "autohotkey",
+      "name": "AutoHotkey",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "autohotkey",
+        "autohotkey.autohotkey"
+      ],
+      "alternatives": [
+        {
+          "id": "input-remapper",
+          "name": "Input Remapper",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "apt": "input-remapper",
+            "dnf": "input-remapper",
+            "official_url": "https://github.com/sezanzeb/input-remapper"
+          },
+          "tagline": "Easy GUI tool to remap keyboard, mouse, and macro buttons on Linux"
+        },
+        {
+          "id": "espanso",
+          "name": "Espanso",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "official_url": "https://espanso.org/docs/install/linux/"
+          },
+          "tagline": "Fast text expansion & custom typing snippets"
+        }
+      ],
+      "summary": "Espanso handles text macros/snippets and Input Remapper handles custom key/mouse bindings cleanly on Linux."
+    },
+    {
+      "id": "idm-downloader",
+      "name": "Internet Download Manager (IDM)",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "internet download manager",
+        "tonec.internetdownloadmanager",
+        "free download manager"
+      ],
+      "alternatives": [
+        {
+          "id": "persepolis",
+          "name": "Persepolis Download Manager",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.github.persepolisdm.persepolis"
+          },
+          "tagline": "Multi-segment accelerated download manager with browser integration"
+        },
+        {
+          "id": "jdownloader",
+          "name": "JDownloader 2",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.jdownloader.JDownloader"
+          },
+          "tagline": "Powerful link grabber and batch download manager"
+        }
+      ],
+      "summary": "Persepolis (powered by aria2) and JDownloader 2 give multi-connection accelerated downloads on Linux."
+    },
+    {
+      "id": "qbittorrent",
+      "name": "qBittorrent",
+      "category": "utilities",
+      "status": "native",
+      "match_patterns": [
+        "qbittorrent",
+        "qbittorrent.qbittorrent"
+      ],
+      "linux_packages": {
+        "flatpak": "org.qbittorrent.qBittorrent",
+        "apt": "qbittorrent",
+        "dnf": "qbittorrent",
+        "pacman": "qbittorrent"
+      },
+      "summary": "Native open-source torrent client on Linux."
+    },
+    {
+      "id": "utorrent",
+      "name": "uTorrent / BitTorrent",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "utorrent",
+        "µtorrent",
+        "μtorrent",
+        "arp\\user\\x64\\utorrent",
+        "bittorrent"
+      ],
+      "alternatives": [
+        {
+          "id": "qbittorrent-alt",
+          "name": "qBittorrent",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.qbittorrent.qBittorrent"
+          },
+          "tagline": "Open-source, cross-platform BitTorrent client with a familiar desktop interface"
+        },
+        {
+          "id": "transmission",
+          "name": "Transmission",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.transmissionbt.Transmission"
+          },
+          "tagline": "Ultra-lightweight minimalist BitTorrent client"
+        }
+      ],
+      "summary": "uTorrent and BitTorrent desktop clients are primarily targeted at Windows and macOS. qBittorrent and Transmission are open-source BitTorrent clients natively available on Linux."
+    },
+    {
+      "id": "rufus",
+      "name": "Rufus / BalenaEtcher",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "rufus",
+        "balenaetcher",
+        "rufus.rufus",
+        "balena.etcher"
+      ],
+      "alternatives": [
+        {
+          "id": "impression",
+          "name": "Impression",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.gitlab.adhami3310.Impression"
+          },
+          "tagline": "Dead-simple, reliable ISO-to-USB flasher for Linux"
+        },
+        {
+          "id": "ventoy",
+          "name": "Ventoy",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "official_url": "https://www.ventoy.net/en/download.html"
+          },
+          "tagline": "Drop multiple ISO files onto one bootable USB stick"
+        }
+      ],
+      "summary": "Impression (clean GNOME USB flasher) and Ventoy (multi-ISO bootable USB) make flashing ISOs effortless on Linux."
+    },
+    {
+      "id": "anydesk",
+      "name": "AnyDesk",
+      "category": "utilities",
+      "status": "native",
+      "match_patterns": [
+        "anydesk",
+        "anydesksoftwaregmbh.anydesk"
+      ],
+      "linux_packages": {
+        "flatpak": "com.anydesk.Anydesk"
+      },
+      "summary": "AnyDesk offers a native Linux client (via anydesk.com and community Flatpak packaging). RustDesk is an open-source alternative."
+    },
+    {
+      "id": "teamviewer",
+      "name": "TeamViewer",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "teamviewer",
+        "teamviewer.teamviewer"
+      ],
+      "alternatives": [
+        {
+          "id": "rustdesk-alt",
+          "name": "RustDesk",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.rustdesk.RustDesk"
+          },
+          "tagline": "Open-source remote desktop client with optional self-hosted relay servers"
+        },
+        {
+          "id": "teamviewer-official",
+          "name": "TeamViewer (Linux)",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "official_url": "https://www.teamviewer.com/en/download/linux/"
+          },
+          "tagline": "Official TeamViewer Linux package"
+        }
+      ],
+      "summary": "TeamViewer provides an official Linux package on its website. RustDesk is an open-source, self-hostable remote desktop alternative available via Flatpak."
+    },
+    {
+      "id": "rustdesk",
+      "name": "RustDesk",
+      "category": "utilities",
+      "status": "native",
+      "match_patterns": [
+        "rustdesk",
+        "rustdesk.rustdesk"
+      ],
+      "linux_packages": {
+        "flatpak": "com.rustdesk.RustDesk"
+      },
+      "summary": "Native Linux open-source remote desktop via Flatpak."
+    },
+    {
+      "id": "parsec",
+      "name": "Parsec",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "parsec",
+        "parsec.parsec"
+      ],
+      "alternatives": [
+        {
+          "id": "moonlight",
+          "name": "Moonlight",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.moonlight_stream.Moonlight"
+          },
+          "tagline": "Ultra-low-latency open-source remote game & desktop streaming"
+        }
+      ],
+      "summary": "Moonlight + Sunshine is the ultra-low-latency open-source game/desktop streaming combo on Linux."
+    },
+    {
+      "id": "treesize-windirstat",
+      "name": "TreeSize / WinDirStat / WizTree",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "treesize",
+        "windirstat",
+        "wiztree",
+        "spacesniffer"
+      ],
+      "alternatives": [
+        {
+          "id": "filelight",
+          "name": "Filelight",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.kde.filelight"
+          },
+          "tagline": "Interactive radial disk-usage map to spot large folders immediately"
+        },
+        {
+          "id": "baobab",
+          "name": "Disk Usage Analyzer (Baobab)",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.gnome.baobab"
+          },
+          "tagline": "Fast folder size tree analyzer"
+        }
+      ],
+      "summary": "Filelight and Baobab visualize disk usage cleanly and fast on Linux."
+    },
+    {
+      "id": "ccleaner",
+      "name": "CCleaner",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "ccleaner",
+        "piriform.ccleaner"
+      ],
+      "alternatives": [
+        {
+          "id": "bleachbit",
+          "name": "BleachBit",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.bleachbit.BleachBit",
+            "apt": "bleachbit",
+            "dnf": "bleachbit",
+            "pacman": "bleachbit"
+          },
+          "tagline": "Open-source disk space and application cache cleaner for Linux"
+        }
+      ],
+      "summary": "CCleaner is not available on Linux, and Linux does not use a Windows-style system registry. BleachBit is an open-source utility for clearing temporary files and application caches on Linux."
+    },
+    {
+      "id": "hwinfo-cpuz",
+      "name": "HWiNFO / CPU-Z / GPU-Z / Core Temp",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "hwinfo",
+        "cpu-z",
+        "gpu-z",
+        "core temp",
+        "speccy",
+        "hwmonitor"
+      ],
+      "alternatives": [
+        {
+          "id": "mission-center",
+          "name": "Mission Center",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.missioncenter.MissionCenter"
+          },
+          "tagline": "Gorgeous real-time CPU, GPU, RAM, Disk & Network monitor"
+        },
+        {
+          "id": "cpu-x",
+          "name": "CPU-X",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.github.thetumultuousunicornofdarkness.cpu-x"
+          },
+          "tagline": "Linux counterpart to CPU-Z showing detailed hardware specs"
+        },
+        {
+          "id": "btop",
+          "name": "btop++",
+          "recommended": false,
+          "type": "cli",
+          "packages": {
+            "apt": "btop",
+            "dnf": "btop",
+            "pacman": "btop",
+            "zypper": "btop"
+          },
+          "tagline": "Beautiful interactive terminal resource monitor"
+        }
+      ],
+      "summary": "These Windows hardware utilities are not natively available on Linux. Mission Center, CPU-X, and btop++ provide live system resource and hardware monitoring on Linux."
+    },
+    {
+      "id": "msi-afterburner",
+      "name": "MSI Afterburner / RivaTuner",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "msi afterburner",
+        "rivatuner"
+      ],
+      "alternatives": [
+        {
+          "id": "lact",
+          "name": "LACT (Linux GPU Control)",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.github.ilya_zlobintsev.LACT"
+          },
+          "tagline": "GPU fan curves, power limits, and overclocking for AMD/NVIDIA/Intel"
+        },
+        {
+          "id": "mangohud",
+          "name": "MangoHud",
+          "recommended": false,
+          "type": "cli",
+          "packages": {
+            "apt": "mangohud",
+            "dnf": "mangohud",
+            "pacman": "mangohud",
+            "zypper": "mangohud"
+          },
+          "tagline": "In-game FPS, frametime, and temperature overlay like RivaTuner"
+        }
+      ],
+      "summary": "LACT controls GPU fan curves & overclocking cleanly on Linux, and MangoHud provides the in-game FPS/temp overlay."
+    },
+    {
+      "id": "voicemeeter",
+      "name": "Voicemeeter / Equalizer APO",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "voicemeeter",
+        "equalizer apo",
+        "steelseries gg",
+        "nvidia broadcast"
+      ],
+      "alternatives": [
+        {
+          "id": "easyeffects",
+          "name": "EasyEffects",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.github.wwmm.easyeffects"
+          },
+          "tagline": "System-wide EQ, AI noise suppression, bass boost & mic effects"
+        },
+        {
+          "id": "qpwgraph",
+          "name": "qpwgraph",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.rncbc.qpwgraph"
+          },
+          "tagline": "Visual audio routing patchbay (route any app to any input/output)"
+        }
+      ],
+      "summary": "EasyEffects (powered by Linux PipeWire) gives system-wide noise cancellation, EQ, compressor, and mic filters!"
+    },
+    {
+      "id": "peripherals-rgb",
+      "name": "Logitech G HUB / Razer Synapse / iCUE",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "logitech g hub",
+        "logi options",
+        "razer synapse",
+        "corsair icue",
+        "armoury crate"
+      ],
+      "alternatives": [
+        {
+          "id": "openrgb",
+          "name": "OpenRGB",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.openrgb.OpenRGB"
+          },
+          "tagline": "Independent open-source RGB lighting controller supporting many third-party peripherals"
+        },
+        {
+          "id": "solaar",
+          "name": "Solaar (Logitech)",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "io.github.pwr_solaar.solaar"
+          },
+          "tagline": "Independent open-source device manager for supported Logitech receivers and peripherals (not affiliated with Logitech)"
+        }
+      ],
+      "summary": "These vendor peripheral configuration suites do not offer official Linux clients. Independent open-source tools such as OpenRGB (RGB lighting), Solaar (supported Logitech receivers/devices), and Piper (supported gaming mice) support many models; check each project's hardware compatibility list."
+    },
+    {
+      "id": "cloud-sync",
+      "name": "Google Drive / OneDrive",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "google drive",
+        "microsoft onedrive",
+        "onedrive",
+        "google.googledrive",
+        "microsoft.onedrive",
+        "microsoft.onedrivesync"
+      ],
+      "exclude_patterns": [
+        "onedrive.photos",
+        "odphotos"
+      ],
+      "alternatives": [
+        {
+          "id": "rclone",
+          "name": "Rclone",
+          "recommended": true,
+          "type": "cli",
+          "packages": {
+            "apt": "rclone",
+            "dnf": "rclone",
+            "pacman": "rclone",
+            "zypper": "rclone"
+          },
+          "tagline": "Fast, encrypted sync & mount tool for Google Drive, OneDrive, S3 & more"
+        },
+        {
+          "id": "syncthing-alt",
+          "name": "Syncthing",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "apt": "syncthing",
+            "dnf": "syncthing",
+            "pacman": "syncthing",
+            "zypper": "syncthing"
+          },
+          "tagline": "Private peer-to-peer folder sync across all your devices (no cloud needed)"
+        }
+      ],
+      "summary": "GNOME/KDE have built-in Google Drive integration, and Rclone mounts & syncs Google Drive, OneDrive, and 70+ cloud providers natively!"
+    },
+    {
+      "id": "dropbox",
+      "name": "Dropbox",
+      "category": "utilities",
+      "status": "native",
+      "match_patterns": [
+        "dropbox",
+        "dropbox.dropbox"
+      ],
+      "linux_packages": {
+        "flatpak": "com.dropbox.Client"
+      },
+      "summary": "Dropbox offers a native Linux client (also available via community Flatpak packaging)."
+    },
+    {
+      "id": "syncthing",
+      "name": "Syncthing",
+      "category": "utilities",
+      "status": "native",
+      "match_patterns": [
+        "syncthing",
+        "syncthing.syncthing"
+      ],
+      "linux_packages": {
+        "apt": "syncthing",
+        "dnf": "syncthing",
+        "pacman": "syncthing",
+        "zypper": "syncthing"
+      },
+      "summary": "Native Linux continuous file synchronization."
+    },
+    {
+      "id": "virtualbox",
+      "name": "Oracle VirtualBox",
+      "category": "utilities",
+      "status": "native",
+      "match_patterns": [
+        "virtualbox",
+        "oracle.virtualbox"
+      ],
+      "linux_packages": {
+        "apt": "virtualbox",
+        "dnf": "VirtualBox",
+        "pacman": "virtualbox"
+      },
+      "summary": "Native Linux VirtualBox (tip: Linux also has built-in KVM/QEMU via GNOME Boxes or Virt-Manager, which is near-native speed!)."
+    },
+    {
+      "id": "vmware",
+      "name": "VMware Workstation",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "vmware workstation",
+        "vmware player"
+      ],
+      "alternatives": [
+        {
+          "id": "gnome-boxes",
+          "name": "GNOME Boxes",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.gnome.Boxes"
+          },
+          "tagline": "One-click virtual machines powered by fast Linux KVM"
+        },
+        {
+          "id": "virt-manager",
+          "name": "Virt-Manager (QEMU/KVM)",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "apt": "virt-manager qemu-kvm",
+            "dnf": "virt-manager qemu-kvm",
+            "pacman": "virt-manager qemu-desktop"
+          },
+          "tagline": "Pro virtualization manager with GPU passthrough & snapshots"
+        }
+      ],
+      "summary": "VMware Workstation offers a native Linux version on Broadcom's website. Linux also provides built-in KVM/QEMU virtualization with graphical frontends such as GNOME Boxes and Virt-Manager."
+    },
+    {
+      "id": "keepassxc",
+      "name": "KeePass / KeePassXC",
+      "category": "security",
+      "status": "native",
+      "match_patterns": [
+        "keepass",
+        "keepassxreboot.keepassxc"
+      ],
+      "linux_packages": {
+        "flatpak": "org.keepassxc.KeePassXC"
+      },
+      "summary": "KeePassXC opens your exact .kdbx database natively on Linux!"
+    },
+    {
+      "id": "bitwarden",
+      "name": "Bitwarden",
+      "category": "security",
+      "status": "native",
+      "match_patterns": [
+        "bitwarden",
+        "bitwarden.bitwarden"
+      ],
+      "linux_packages": {
+        "flatpak": "com.bitwarden.desktop"
+      },
+      "summary": "Official native Linux password manager."
+    },
+    {
+      "id": "1password",
+      "name": "1Password",
+      "category": "security",
+      "status": "native",
+      "match_patterns": [
+        "1password",
+        "agilebits.1password"
+      ],
+      "linux_packages": {
+        "official_url": "https://1password.com/downloads/linux/"
+      },
+      "summary": "Official Linux desktop app & SSH agent from 1Password."
+    },
+    {
+      "id": "protonvpn",
+      "name": "Proton VPN",
+      "category": "security",
+      "status": "native",
+      "match_patterns": [
+        "proton vpn",
+        "protonvpn"
+      ],
+      "linux_packages": {
+        "flatpak": "com.protonvpn.www"
+      },
+      "summary": "Proton VPN provides an official Linux client on protonvpn.com (also available via community Flatpak packaging)."
+    },
+    {
+      "id": "tailscale",
+      "name": "Tailscale / WireGuard",
+      "category": "security",
+      "status": "native",
+      "match_patterns": [
+        "tailscale",
+        "wireguard"
+      ],
+      "linux_packages": {
+        "apt": "wireguard-tools",
+        "dnf": "wireguard-tools",
+        "pacman": "wireguard-tools",
+        "official_url": "https://tailscale.com/download/linux"
+      },
+      "summary": "WireGuard is built straight into the Linux kernel and Tailscale has first-class Linux support."
+    },
+    {
+      "id": "steam",
+      "name": "Steam",
+      "category": "gaming",
+      "status": "native",
+      "match_patterns": [
+        "steam",
+        "valve.steam"
+      ],
+      "exclude_patterns": [
+        "steamvr",
+        "steamworks"
+      ],
+      "linux_packages": {
+        "flatpak": "com.valvesoftware.Steam",
+        "apt": "steam",
+        "dnf": "steam",
+        "pacman": "steam"
+      },
+      "summary": "Valve provides a native Linux Steam client with Steam Play / Proton compatibility support for many Windows titles. Community compatibility reports are available on ProtonDB.com (some multiplayer titles with anti-cheat do not support Linux)."
+    },
+    {
+      "id": "epic-gog",
+      "name": "Epic Games Launcher / GOG Galaxy",
+      "category": "gaming",
+      "status": "compat",
+      "match_patterns": [
+        "epic games launcher",
+        "gog galaxy",
+        "epicgames.epicgameslauncher",
+        "gog.galaxy"
+      ],
+      "alternatives": [
+        {
+          "id": "heroic",
+          "name": "Heroic Games Launcher",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.heroicgameslauncher.hgl"
+          },
+          "tagline": "Open-source Epic, GOG & Amazon launcher with built-in Proton/Wine"
+        },
+        {
+          "id": "lutris",
+          "name": "Lutris",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "net.lutris.Lutris"
+          },
+          "tagline": "Universal Linux gaming manager for all launchers & Windows games"
+        }
+      ],
+      "summary": "Epic Games Launcher and GOG Galaxy do not offer native Linux clients. Heroic Games Launcher and Lutris are independent open-source launchers for accessing supported libraries via Wine/Proton (subject to each platform's Terms of Service and game anti-cheat compatibility)."
+    },
+    {
+      "id": "ea-ubisoft-battlenet",
+      "name": "EA App / Ubisoft Connect / Battle.net",
+      "category": "gaming",
+      "status": "compat",
+      "match_patterns": [
+        "ea app",
+        "origin",
+        "ubisoft connect",
+        "battle.net",
+        "blizzard"
+      ],
+      "alternatives": [
+        {
+          "id": "lutris-compat",
+          "name": "Lutris",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "net.lutris.Lutris"
+          },
+          "tagline": "Automated community installers for Battle.net, EA App & Ubisoft Connect"
+        },
+        {
+          "id": "bottles-compat",
+          "name": "Bottles",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.usebottles.bottles"
+          },
+          "tagline": "Friendly sandboxed manager for running Windows apps & launchers on Linux"
+        }
+      ],
+      "summary": "These Windows launchers are not officially supported on Linux. Independent tools such as Lutris or Bottles (Wine/Proton) can run some titles locally, though games requiring Windows kernel-level anti-cheat will not run on Linux and anti-cheat systems should never be bypassed."
+    },
+    {
+      "id": "minecraft",
+      "name": "Minecraft Launcher",
+      "category": "gaming",
+      "status": "native",
+      "match_patterns": [
+        "minecraft launcher",
+        "mojang.minecraftlauncher",
+        "curseforge",
+        "modrinth"
+      ],
+      "linux_packages": {
+        "flatpak": "org.prismlauncher.PrismLauncher"
+      },
+      "summary": "Minecraft: Java Edition supports Linux natively (official launcher available from minecraft.net). Prism Launcher is an independent open-source launcher for managing mods and instances with a valid licensed Minecraft account."
+    },
+    {
+      "id": "roblox",
+      "name": "Roblox",
+      "category": "gaming",
+      "status": "compat",
+      "match_patterns": [
+        "roblox"
+      ],
+      "alternatives": [
+        {
+          "id": "sober",
+          "name": "Sober (Unofficial Community Runtime)",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.vinegarhq.Sober"
+          },
+          "tagline": "Unofficial third-party Linux compatibility runtime (not affiliated with or endorsed by Roblox Corporation; check Roblox Terms of Use)"
+        }
+      ],
+      "summary": "Roblox does not officially support Linux. Sober is an independent, unofficial community runtime available via Flatpak; compatibility is not guaranteed by Roblox Corporation and users are solely responsible for reviewing and complying with Roblox's Terms of Use."
+    },
+    {
+      "id": "riot-anticheat",
+      "name": "Valorant / League of Legends / Riot Client",
+      "category": "gaming",
+      "status": "attention",
+      "match_patterns": [
+        "valorant",
+        "league of legends",
+        "teamfight tactics",
+        "riot client",
+        "riot vanguard"
+      ],
+      "summary": "Riot Vanguard requires a Windows kernel-mode driver and is not supported on Linux or in virtual machines. Do not attempt to bypass anti-cheat protections; use a supported Windows installation (such as dual-boot) if you play these titles."
+    },
+    {
+      "id": "fortnite-anticheat",
+      "name": "Fortnite",
+      "category": "gaming",
+      "status": "attention",
+      "match_patterns": [
+        "fortnite"
+      ],
+      "summary": "Fortnite does not support native Linux due to its anti-cheat requirements. Do not attempt to bypass anti-cheat protections; consider supported cloud gaming services (such as GeForce NOW or Xbox Cloud Gaming) or a supported Windows installation."
+    },
+    {
+      "id": "retroarch",
+      "name": "RetroArch",
+      "category": "gaming",
+      "status": "native",
+      "match_patterns": [
+        "retroarch"
+      ],
+      "linux_packages": {
+        "flatpak": "org.libretro.RetroArch"
+      },
+      "summary": "Native Linux retro gaming frontend."
+    },
+    {
+      "id": "autocad-solidworks",
+      "name": "AutoCAD / SolidWorks / Fusion 360",
+      "category": "creative",
+      "status": "attention",
+      "match_patterns": [
+        "autocad",
+        "solidworks",
+        "fusion 360",
+        "autodesk"
+      ],
+      "alternatives": [
+        {
+          "id": "freecad",
+          "name": "FreeCAD",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.freecad.FreeCAD"
+          },
+          "tagline": "Parametric 3D CAD modeler in open source"
+        },
+        {
+          "id": "onshape",
+          "name": "Onshape (Web CAD)",
+          "recommended": false,
+          "type": "web",
+          "packages": {
+            "official_url": "https://www.onshape.com"
+          },
+          "tagline": "Full cloud-native parametric CAD right in your Linux browser"
+        }
+      ],
+      "summary": "Desktop AutoCAD, SolidWorks, and Fusion 360 clients are not natively supported on Linux. FreeCAD (open-source desktop CAD) and Onshape (browser-based CAD) are Linux-compatible alternatives; specialized proprietary CAD workflows may still require a supported Windows environment."
+    },
+    {
+      "id": "deno",
+      "name": "Deno",
+      "category": "runtimes",
+      "status": "native",
+      "word_patterns": [
+        "deno"
+      ],
+      "match_patterns": [
+        "denoland.deno"
+      ],
+      "linux_packages": {
+        "pacman": "deno",
+        "official_url": "https://docs.deno.com/runtime/getting_started/installation/"
+      },
+      "summary": "Deno natively supports Linux with official prebuilt binaries and distribution packages. Follow the official Deno documentation to install on your Linux distribution."
+    },
+    {
+      "id": "ollama",
+      "name": "Ollama",
+      "category": "runtimes",
+      "status": "native",
+      "word_patterns": [
+        "ollama"
+      ],
+      "match_patterns": [
+        "ollama.ollama"
+      ],
+      "linux_packages": {
+        "pacman": "ollama",
+        "official_url": "https://ollama.com/download/linux"
+      },
+      "summary": "Ollama runs natively on Linux with CPU and GPU acceleration (NVIDIA CUDA and AMD ROCm). Follow Ollama's official Linux installation page or install from your distribution repository where packaged."
+    },
+    {
+      "id": "nmap",
+      "name": "Nmap",
+      "category": "runtimes",
+      "status": "native",
+      "word_patterns": [
+        "nmap"
+      ],
+      "match_patterns": [
+        "insecure.nmap"
+      ],
+      "exclude_patterns": [
+        "npcap"
+      ],
+      "linux_packages": {
+        "apt": "nmap",
+        "dnf": "nmap",
+        "pacman": "nmap",
+        "zypper": "nmap"
+      },
+      "summary": "Nmap is natively packaged across all major Linux distributions and uses Linux's built-in packet capture (libpcap) without needing Npcap."
+    },
+    {
+      "id": "yt-dlp",
+      "name": "yt-dlp",
+      "category": "runtimes",
+      "status": "native",
+      "match_patterns": [
+        "yt-dlp",
+        "yt-dlp.yt-dlp"
+      ],
+      "exclude_patterns": [
+        "ffmpeg for yt-dlp"
+      ],
+      "linux_packages": {
+        "apt": "yt-dlp",
+        "dnf": "yt-dlp",
+        "pacman": "yt-dlp",
+        "zypper": "yt-dlp",
+        "official_url": "https://github.com/yt-dlp/yt-dlp"
+      },
+      "summary": "yt-dlp is a native open-source command-line downloader for publicly accessible web media and streams. Users are solely responsible for complying with applicable website Terms of Service and copyright laws."
+    },
+    {
+      "id": "anaconda",
+      "name": "Anaconda / Miniconda",
+      "category": "runtimes",
+      "status": "native",
+      "match_patterns": [
+        "anaconda3",
+        "miniconda3",
+        "anaconda.anaconda",
+        "anaconda.miniconda"
+      ],
+      "linux_packages": {
+        "official_url": "https://www.anaconda.com/download"
+      },
+      "summary": "Anaconda and Miniconda provide official native Linux installers for Python and data-science environments."
+    },
+    {
+      "id": "snapmaker-luban",
+      "name": "Snapmaker Luban",
+      "category": "creative",
+      "status": "native",
+      "match_patterns": [
+        "snapmaker luban",
+        "snapmaker.luban"
+      ],
+      "linux_packages": {
+        "official_url": "https://www.snapmaker.com/snapmaker-luban"
+      },
+      "summary": "Snapmaker Luban provides official native Linux packages (.deb and AppImage) for 3D printing, laser engraving, and CNC workflows on Snapmaker machines."
+    },
+    {
+      "id": "antigravity",
+      "name": "Antigravity",
+      "category": "dev",
+      "status": "native",
+      "word_patterns": [
+        "antigravity"
+      ],
+      "match_patterns": [
+        "google.antigravity"
+      ],
+      "linux_packages": {
+        "official_url": "https://antigravity.google/download"
+      },
+      "summary": "Antigravity provides official native Linux packages from its download page."
+    },
+    {
+      "id": "wsl",
+      "name": "Windows Subsystem for Linux (WSL)",
+      "category": "dev",
+      "status": "native",
+      "no_install_needed": true,
+      "match_patterns": [
+        "windows subsystem for linux",
+        "microsoftcorporationii.windowssubsystemforlinux",
+        "microsoft.wsl"
+      ],
+      "linux_packages": {},
+      "summary": "Windows Subsystem for Linux runs a Linux environment inside Windows — when switching directly to Linux, you are already running native Linux and no replacement package is needed."
+    },
+    {
+      "id": "microsoft-outlook",
+      "name": "Outlook for Windows",
+      "category": "communication",
+      "status": "alternative",
+      "match_patterns": [
+        "outlook for windows",
+        "microsoft outlook",
+        "microsoft.outlookforwindows",
+        "microsoft.outlook"
+      ],
+      "alternatives": [
+        {
+          "id": "thunderbird-outlook",
+          "name": "Mozilla Thunderbird",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.mozilla.Thunderbird",
+            "apt": "thunderbird",
+            "dnf": "thunderbird",
+            "pacman": "thunderbird",
+            "zypper": "MozillaThunderbird"
+          },
+          "tagline": "Open-source native Linux email, calendar, and contacts client"
+        },
+        {
+          "id": "outlook-web",
+          "name": "Outlook on the Web",
+          "recommended": false,
+          "type": "web",
+          "packages": {
+            "official_url": "https://outlook.live.com"
+          },
+          "tagline": "Official Outlook web interface in any Linux browser"
+        },
+        {
+          "id": "betterbird",
+          "name": "Betterbird",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "eu.betterbird.Betterbird"
+          },
+          "tagline": "Community-maintained fork of Thunderbird with extra refinements"
+        }
+      ],
+      "summary": "Outlook for Windows does not provide a native Linux desktop client. Outlook on the Web runs directly in Linux browsers, and Mozilla Thunderbird or Betterbird provide native desktop email and calendar support."
+    },
+    {
+      "id": "microsoft-clipchamp",
+      "name": "Microsoft Clipchamp",
+      "category": "creative",
+      "status": "alternative",
+      "match_patterns": [
+        "microsoft clipchamp",
+        "clipchamp.clipchamp"
+      ],
+      "alternatives": [
+        {
+          "id": "kdenlive-clipchamp",
+          "name": "Kdenlive",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.kde.kdenlive",
+            "apt": "kdenlive",
+            "dnf": "kdenlive",
+            "pacman": "kdenlive"
+          },
+          "tagline": "Open-source multi-track native Linux video editor with hardware acceleration"
+        },
+        {
+          "id": "clipchamp-web",
+          "name": "Clipchamp Web",
+          "recommended": false,
+          "type": "web",
+          "packages": {
+            "official_url": "https://app.clipchamp.com"
+          },
+          "tagline": "Browser-based Clipchamp editor in Chromium-based Linux browsers"
+        },
+        {
+          "id": "shotcut-clipchamp",
+          "name": "Shotcut",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "org.shotcut.Shotcut"
+          },
+          "tagline": "Clean, approachable cross-platform open-source video editor"
+        }
+      ],
+      "summary": "Microsoft Clipchamp's desktop app is Windows-focused, while Clipchamp Web runs in supported Chromium-based browsers on Linux. For native offline video editing, Kdenlive and Shotcut are widely used open-source Linux editors."
+    },
+    {
+      "id": "windhawk",
+      "name": "Windhawk",
+      "category": "utilities",
+      "status": "alternative",
+      "match_patterns": [
+        "windhawk",
+        "ramensoftware.windhawk"
+      ],
+      "alternatives": [
+        {
+          "id": "gnome-tweaks",
+          "name": "GNOME Tweaks",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "apt": "gnome-tweaks",
+            "dnf": "gnome-tweaks",
+            "pacman": "gnome-tweaks",
+            "zypper": "gnome-tweaks"
+          },
+          "tagline": "Customize fonts, themes, window controls, and desktop behavior on GNOME"
+        },
+        {
+          "id": "kde-plasma-custom",
+          "name": "KDE Plasma Built-in Customization",
+          "recommended": false,
+          "type": "web",
+          "packages": {
+            "official_url": "https://kde.org/plasma-desktop/"
+          },
+          "tagline": "KDE Plasma includes extensive native panel, widget, theme, and shortcut customization"
+        }
+      ],
+      "summary": "Windhawk customizes Windows UI internals and is Windows-only. Linux desktop environments such as KDE Plasma and GNOME offer extensive native customization, themes, widgets, and extensions."
+    },
+    {
+      "id": "rockstar-launcher",
+      "name": "Rockstar Games Launcher",
+      "category": "gaming",
+      "status": "compat",
+      "match_patterns": [
+        "rockstar games launcher",
+        "rockstar games sdk",
+        "rockstar games social club",
+        "rockstargames.launcher"
+      ],
+      "alternatives": [
+        {
+          "id": "lutris-rockstar",
+          "name": "Lutris",
+          "recommended": true,
+          "type": "app",
+          "packages": {
+            "flatpak": "net.lutris.Lutris"
+          },
+          "tagline": "Independent open-source Linux gaming manager supporting Wine and Proton runners"
+        },
+        {
+          "id": "steam-rockstar",
+          "name": "Steam (Proton)",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.valvesoftware.Steam",
+            "apt": "steam",
+            "dnf": "steam",
+            "pacman": "steam"
+          },
+          "tagline": "Runs Steam-purchased Rockstar titles via Steam Play / Proton"
+        },
+        {
+          "id": "bottles-rockstar",
+          "name": "Bottles",
+          "recommended": false,
+          "type": "app",
+          "packages": {
+            "flatpak": "com.usebottles.bottles"
+          },
+          "tagline": "Sandboxed Wine prefix manager for Windows game launchers"
+        }
+      ],
+      "summary": "Rockstar Games Launcher does not provide an official native Linux client. Independent third-party compatibility tools such as Steam Proton, Lutris, or Bottles can run many single-player titles, though online multiplayer anti-cheat (such as BattlEye in GTA Online) may restrict Linux access per publisher policy. Users are responsible for complying with all applicable EULAs and Terms of Service."
+    },
+    {
+      "id": "xbox-app",
+      "name": "Xbox App (Windows)",
+      "category": "gaming",
+      "status": "attention",
+      "exact_patterns": [
+        "xbox",
+        "xbox app"
+      ],
+      "match_patterns": [
+        "microsoft.gamingapp"
+      ],
+      "exclude_patterns": [
+        "xbox identity",
+        "xbox tcui",
+        "game bar",
+        "game speech"
+      ],
+      "alternatives": [
+        {
+          "id": "xbox-cloud-gaming",
+          "name": "Xbox Cloud Gaming (Web)",
+          "recommended": true,
+          "type": "web",
+          "packages": {
+            "official_url": "https://www.xbox.com/play"
+          },
+          "tagline": "Stream eligible Xbox Game Pass Ultimate titles directly in a Linux browser"
+        }
+      ],
+      "summary": "The Windows Xbox desktop app and local Microsoft Store / PC Game Pass game downloads are Windows-only. Eligible Xbox Cloud Gaming titles can be played in supported Linux browsers."
+    }
+  ],
+  "hardware_drivers": [
+    {
+      "id": "hw-nvidia",
+      "name": "NVIDIA GPU & Drivers",
+      "driver_status": "official_driver",
+      "package_id_substrings": [
+        "{b2fe1952-0186-46c3-baec-a80aa35ac5b8}",
+        "msix\\nvidiacorp."
+      ],
+      "winget_prefixes": [
+        "nvidia."
+      ],
+      "publisher_words": [
+        "nvidia"
+      ],
+      "name_patterns": [
+        "nvidia graphics",
+        "nvidia display",
+        "nvidia app",
+        "nvidia control panel",
+        "nvidia geforce",
+        "nvidia hd audio",
+        "nvidia physx",
+        "nvidia frameview",
+        "nvidia cuda",
+        "nvidia driver",
+        "geforce experience"
+      ],
+      "exclude_patterns": [
+        "nvidia broadcast"
+      ],
+      "official_url": "https://www.nvidia.com/en-us/drivers/unix/",
+      "summary": "NVIDIA provides official native Linux GPU drivers (including open-kernel modules for RTX 20-series / Turing and newer). Most distributions (Ubuntu/Mint Driver Manager, Fedora RPM Fusion, Arch packages, Pop!_OS NVIDIA ISO) provide guided driver installation without manual .run installers."
+    },
+    {
+      "id": "hw-intel",
+      "name": "Intel Graphics, Wireless & Platform",
+      "driver_status": "kernel_builtin",
+      "package_id_substrings": [
+        "msix\\appup.intelgraphics",
+        "intel.graphicssoftware",
+        "intel.oneapi"
+      ],
+      "winget_prefixes": [
+        "intel."
+      ],
+      "publisher_words": [
+        "intel"
+      ],
+      "name_word_patterns": [
+        "intel graphics",
+        "intel(r) graphics",
+        "intel arc",
+        "intel iris",
+        "intel uhd",
+        "intel driver",
+        "intel(r) driver",
+        "intel wireless",
+        "intel bluetooth",
+        "intel chipset",
+        "intel management",
+        "intel serial",
+        "intel computing improvement",
+        "intel(r) computing improvement",
+        "intel software installer",
+        "oneapi level zero"
+      ],
+      "exclude_patterns": [
+        "intellij",
+        "jetbrains"
+      ],
+      "summary": "Intel integrated and Arc GPUs (i915/xe + Mesa), Wi-Fi (iwlwifi), Bluetooth, and chipset drivers are built directly into the Linux kernel and update automatically with your system. Intel oneAPI Level Zero compute runtimes are also available natively on Linux."
+    },
+    {
+      "id": "hw-amd",
+      "name": "AMD Radeon GPU & Chipset",
+      "driver_status": "kernel_builtin",
+      "package_id_substrings": [
+        "msix\\advancedmicrodevices"
+      ],
+      "winget_prefixes": [
+        "amd."
+      ],
+      "publisher_words": [
+        "advanced micro devices"
+      ],
+      "name_patterns": [
+        "amd software",
+        "amd radeon",
+        "amd adrenalin",
+        "amd chipset",
+        "amd ryzen",
+        "amd gpio",
+        "amd psp",
+        "amd smbus",
+        "amd pci"
+      ],
+      "summary": "AMD Radeon GPU drivers (amdgpu + Mesa/RADV) and Ryzen chipset drivers are built directly into the Linux kernel and update with your distribution. Optional open-source tools such as LACT or CoreCtrl provide graphical fan and power controls."
+    },
+    {
+      "id": "hw-qualcomm-snapdragon",
+      "name": "Qualcomm Snapdragon / ARM64 Platform",
+      "driver_status": "oem_utility",
+      "publisher_words": [
+        "qualcomm"
+      ],
+      "name_patterns": [
+        "snapdragon",
+        "qualcomm adreno",
+        "qualcomm hexagon",
+        "qualcomm control panel",
+        "qualcomm snapdragon"
+      ],
+      "official_url": "https://www.kernel.org/",
+      "summary": "Windows-on-ARM (Snapdragon X / ARM64) PCs require an ARM64 (aarch64) Linux distribution with a recent kernel (Linux 6.11+) and device-tree/firmware support for your specific laptop model. Always test Wi-Fi, audio, sleep, and display on an ARM64 Live USB first, and note that x86-64 software/games require ARM64 builds or translation layers."
+    },
+    {
+      "id": "hw-mediatek-wifi",
+      "name": "MediaTek Wi-Fi & Bluetooth",
+      "driver_status": "kernel_builtin",
+      "publisher_words": [
+        "mediatek"
+      ],
+      "name_patterns": [
+        "mediatek wi-fi",
+        "mediatek wifi",
+        "mediatek wireless",
+        "mediatek bluetooth",
+        "rz616",
+        "mt7921",
+        "mt7922",
+        "mt7925"
+      ],
+      "summary": "Modern MediaTek Wi-Fi 6/6E/7 and Bluetooth adapters (mt7921e / mt7925e) are supported natively in recent Linux kernels and linux-firmware packages."
+    },
+    {
+      "id": "hw-qualcomm-wifi",
+      "name": "Qualcomm Atheros / Killer Wi-Fi & Ethernet",
+      "driver_status": "kernel_builtin",
+      "name_patterns": [
+        "qualcomm atheros",
+        "killer intelligence",
+        "killer performance",
+        "killer wireless",
+        "killer ethernet",
+        "fastconnect"
+      ],
+      "summary": "Qualcomm Atheros and Killer Wi-Fi/Ethernet adapters (ath10k / ath11k / ath12k) are supported directly in modern Linux kernels and linux-firmware; Windows companion control panels are not required on Linux."
+    },
+    {
+      "id": "hw-broadcom",
+      "name": "Broadcom Wi-Fi & Bluetooth",
+      "driver_status": "oem_utility",
+      "publisher_words": [
+        "broadcom"
+      ],
+      "name_patterns": [
+        "broadcom 802.11",
+        "broadcom wireless",
+        "broadcom bluetooth",
+        "broadcom netxtreme"
+      ],
+      "summary": "Many Broadcom Ethernet adapters work natively in Linux, while some Broadcom Wi-Fi chipsets require enabling non-free firmware or the distribution's broadcom-wl driver package. Test Wi-Fi on a Linux Live USB or have Ethernet/USB tethering available during initial setup."
+    },
+    {
+      "id": "hw-realtek",
+      "name": "Realtek Audio & Network",
+      "driver_status": "kernel_builtin",
+      "package_id_substrings": [
+        "realteksemiconductorcorp."
+      ],
+      "publisher_words": [
+        "realtek"
+      ],
+      "name_patterns": [
+        "realtek"
+      ],
+      "summary": "Realtek audio (ALSA/PipeWire) and Ethernet/Wi-Fi drivers are built into the Linux kernel. Use desktop sound settings or open-source EasyEffects for equalizer and audio routing."
+    },
+    {
+      "id": "hw-lenovo",
+      "name": "Lenovo Vantage / ThinkPad / Legion Utilities",
+      "driver_status": "kernel_builtin",
+      "package_id_substrings": [
+        "e046963f."
+      ],
+      "publisher_words": [
+        "lenovo"
+      ],
+      "name_patterns": [
+        "lenovo vantage",
+        "lenovo commercial vantage",
+        "lenovo system update",
+        "lenovo hotkeys",
+        "lenovo utility",
+        "legion toolkit",
+        "lenovo arena"
+      ],
+      "official_url": "https://fwupd.org/",
+      "summary": "Lenovo ThinkPad, IdeaPad, and Legion hardware controls (hotkeys, battery charge thresholds, thermal profiles) are widely supported in the Linux kernel (thinkpad_acpi / ideapad_laptop) and firmware updates are delivered natively via LVFS / fwupd."
+    },
+    {
+      "id": "hw-dell",
+      "name": "Dell / Alienware Support & Firmware Utilities",
+      "driver_status": "kernel_builtin",
+      "package_id_substrings": [
+        "dellinc."
+      ],
+      "publisher_words": [
+        "dell"
+      ],
+      "name_patterns": [
+        "dell supportassist",
+        "dell command",
+        "dell optimizer",
+        "dell display manager",
+        "dell update",
+        "alienware command center",
+        "dell power manager"
+      ],
+      "official_url": "https://fwupd.org/",
+      "summary": "Dell systems have broad Linux kernel support and publish BIOS/UEFI firmware updates through the open Linux Vendor Firmware Service (fwupd). Windows companion apps like SupportAssist and Dell Optimizer are not needed on Linux."
+    },
+    {
+      "id": "hw-hp",
+      "name": "HP / OMEN Companion & Printer Utilities",
+      "driver_status": "oem_utility",
+      "package_id_substrings": [
+        "ad2f1837."
+      ],
+      "name_patterns": [
+        "hp support assistant",
+        "hp smart",
+        "omen gaming hub",
+        "hp audio control",
+        "hp system event",
+        "hp documentation",
+        "poly lens"
+      ],
+      "official_url": "https://fwupd.org/",
+      "summary": "HP laptops work with standard Linux kernel ACPI drivers and fwupd firmware updates on supported models. HP printers and scanners are supported natively on Linux via CUPS driverless printing and HP's open-source HPLIP package."
+    },
+    {
+      "id": "hw-surface",
+      "name": "Microsoft Surface Drivers & App",
+      "driver_status": "oem_utility",
+      "name_patterns": [
+        "microsoft surface",
+        "surface app",
+        "surface diagnostic"
+      ],
+      "official_url": "https://github.com/linux-surface/linux-surface",
+      "summary": "Basic features on Microsoft Surface devices work in standard Linux kernels, while full touch, pen, battery, and camera support on many Surface models is provided by the independent open-source linux-surface kernel project (check their device support matrix)."
+    },
+    {
+      "id": "hw-msi",
+      "name": "MSI Center / Dragon Center Utilities",
+      "driver_status": "oem_utility",
+      "name_patterns": [
+        "msi center",
+        "msi dragon center",
+        "msi true color",
+        "msi mystic light"
+      ],
+      "summary": "MSI motherboard and laptop hardware works via Linux kernel drivers (msi-ec / msi-wmi). For RGB lighting and fan controls on supported hardware, check open-source OpenRGB and MControlCenter."
+    },
+    {
+      "id": "hw-acer",
+      "name": "Acer NitroSense / PredatorSense / Care Center",
+      "driver_status": "oem_utility",
+      "name_patterns": [
+        "nitrosense",
+        "predatorsense",
+        "acer care center",
+        "acer quick access"
+      ],
+      "summary": "Standard Acer laptop controls work via the Linux kernel acer-wmi module; Windows companion dashboards such as NitroSense and PredatorSense are Windows-only."
+    },
+    {
+      "id": "hw-gigabyte",
+      "name": "Gigabyte / AORUS Control Center",
+      "driver_status": "oem_utility",
+      "name_patterns": [
+        "gigabyte control center",
+        "aorus engine",
+        "rgb fusion",
+        "app center"
+      ],
+      "summary": "Gigabyte motherboards and GPUs work natively with Linux kernel drivers; Windows-only companion suites can be replaced with open-source OpenRGB and lm-sensors/CoolerControl on supported models."
+    },
+    {
+      "id": "hw-apple-bootcamp",
+      "name": "Apple Boot Camp & Hardware Support",
+      "driver_status": "oem_utility",
+      "name_patterns": [
+        "apple software update",
+        "boot camp services",
+        "apple mobile device support"
+      ],
+      "official_url": "https://wiki.t2linux.org/",
+      "summary": "Intel Macs with Apple T2 security chips can run Linux via the community t2linux kernel/project; older Intel Macs work directly with mainline Linux kernels."
+    },
+    {
+      "id": "hw-printers",
+      "name": "Printers & Scanners (Canon / Epson / Brother / Xerox)",
+      "driver_status": "kernel_builtin",
+      "name_patterns": [
+        "canon ij",
+        "canon quick",
+        "epson scan",
+        "epson software",
+        "brother utilities",
+        "brother iprint",
+        "xerox print",
+        "samsung printer"
+      ],
+      "summary": "Most modern network and USB printers work automatically on Linux with zero driver installs via CUPS driverless printing (AirPrint / IPP Everywhere) and SANE for scanning; Brother, Canon, Epson, and HP also offer native Linux drivers for older models."
+    },
+    {
+      "id": "hw-tablets",
+      "name": "Drawing Tablets (Wacom / Huion / XP-Pen / Gaomon)",
+      "driver_status": "kernel_builtin",
+      "publisher_words": [
+        "wacom",
+        "huion"
+      ],
+      "name_patterns": [
+        "wacom tablet",
+        "wacom center",
+        "huion tablet",
+        "xp-pen",
+        "pentablet",
+        "gaomon"
+      ],
+      "official_url": "https://opentabletdriver.net/",
+      "summary": "Wacom and many Huion/XP-Pen drawing tablets are supported directly in the Linux kernel (wacom/DIGImend), and open-source OpenTabletDriver adds low-latency area and button configuration across hundreds of tablets."
+    },
+    {
+      "id": "hw-storage-ssd",
+      "name": "SSD & Storage Utilities (Samsung / WD / Crucial / Kingston / Seagate)",
+      "driver_status": "kernel_builtin",
+      "name_patterns": [
+        "samsung magician",
+        "western digital dashboard",
+        "wd discovery",
+        "crucial storage executive",
+        "kingston ssd manager",
+        "seagate seatools",
+        "sandisk dashboard"
+      ],
+      "summary": "NVMe and SATA SSD health, TRIM, and SMART monitoring are built into Linux via GNOME Disks, smartmontools, nvme-cli, and fwupd (which delivers SSD firmware updates for supported drives)."
+    },
+    {
+      "id": "hw-display-creator",
+      "name": "Display Docks, Stream Decks & VR Companion Apps",
+      "driver_status": "oem_utility",
+      "name_patterns": [
+        "displaylink",
+        "lg onscreen control",
+        "elgato stream deck",
+        "elgato camera hub",
+        "elgato wave link",
+        "meta quest link",
+        "oculus"
+      ],
+      "summary": "DisplayLink publishes an official Linux driver (evdi) for USB docks; monitors can adjust brightness/inputs via ddcutil; Elgato Stream Deck works with open-source StreamController/Boatswain; wireless PCVR headsets can connect on Linux via ALVR or WiVRn."
+    },
+    {
+      "id": "hw-audio-peripherals",
+      "name": "USB Audio Interfaces & Gaming Headsets",
+      "driver_status": "oem_utility",
+      "name_patterns": [
+        "steelseries gg",
+        "hyperx ngenuity",
+        "sound blaster command",
+        "creative app",
+        "focusrite control",
+        "jabra direct"
+      ],
+      "summary": "Class-compliant USB microphones, audio interfaces (such as Focusrite Scarlett), and gaming headsets work natively on Linux via ALSA and PipeWire. Windows companion apps are Windows-only; use EasyEffects or alsa-scarlett-gui on Linux."
+    },
+    {
+      "id": "hw-msodbc",
+      "name": "Microsoft ODBC Driver for SQL Server",
+      "driver_status": "official_driver",
+      "winget_prefixes": [
+        "microsoft.msodbcsql"
+      ],
+      "name_patterns": [
+        "microsoft odbc driver"
+      ],
+      "official_url": "https://learn.microsoft.com/sql/connect/odbc/linux-mac/installing-the-microsoft-odbc-driver-for-sql-server",
+      "summary": "Microsoft publishes official native Linux ODBC Driver packages (msodbcsql17/18) for Ubuntu, Debian, Fedora/RHEL, and openSUSE."
+    },
+    {
+      "id": "hw-npcap",
+      "name": "Npcap / WinPcap Packet Capture Driver",
+      "driver_status": "kernel_builtin",
+      "name_patterns": [
+        "npcap",
+        "winpcap"
+      ],
+      "summary": "Npcap is a Windows-only packet capture driver used by tools such as Nmap and Wireshark on Windows. Linux provides native kernel packet capture (libpcap / AF_PACKET) out of the box."
+    },
+    {
+      "id": "hw-virtual-input",
+      "name": "Controller & Virtual Input Drivers (ViGEm / HidHide / FakerInput)",
+      "driver_status": "kernel_builtin",
+      "publisher_words": [
+        "nefarius"
+      ],
+      "name_patterns": [
+        "vigem",
+        "hidhide",
+        "fakerinput",
+        "vjoy",
+        "scptoolkit",
+        "ds4windows"
+      ],
+      "summary": "Linux includes native kernel drivers for PlayStation (DualSense/DualShock 4), Xbox, Nintendo Switch, and generic USB/Bluetooth controllers alongside Steam Input — Windows virtual bus drivers such as ViGEmBus, HidHide, and FakerInput are not needed on Linux."
+    },
+    {
+      "id": "hw-spatial-audio",
+      "name": "Spatial Audio & OEM Sound Enhancements (Dolby / THX / DTS)",
+      "driver_status": "oem_utility",
+      "package_id_substrings": [
+        "dolbylaboratories.",
+        "dtsinc.",
+        "nahimic"
+      ],
+      "publisher_words": [
+        "thx",
+        "dolby",
+        "nahimic",
+        "dts"
+      ],
+      "name_patterns": [
+        "dolby access",
+        "dolby atmos",
+        "dolby digital",
+        "dolby audio",
+        "thx spatial",
+        "nahimic",
+        "dts sound",
+        "dts headphone"
+      ],
+      "summary": "Standard USB and analog audio output works natively on Linux via ALSA and PipeWire. Vendor spatial-audio companion apps (Dolby Access, THX Spatial Audio, DTS) are Windows-only; open-source EasyEffects provides system-wide equalizer and audio effects on Linux."
+    },
+    {
+      "id": "hw-logitech",
+      "name": "Logitech Peripherals & Software",
+      "driver_status": "oem_utility",
+      "winget_prefixes": [
+        "logitech."
+      ],
+      "publisher_words": [
+        "logitech"
+      ],
+      "name_patterns": [
+        "logi options",
+        "logi download assistant",
+        "logi plugin service",
+        "logi bolt",
+        "logitech g hub",
+        "logitech setpoint",
+        "logitech unifying",
+        "logitech gaming software"
+      ],
+      "summary": "Logitech mice, keyboards, and receivers work out of the box on Linux via standard kernel HID drivers. Official Logitech configuration suites are Windows/macOS-only; independent open-source tools such as Solaar (supported receivers/devices), Piper (supported gaming mice), and Input Remapper provide Linux configuration."
+    },
+    {
+      "id": "hw-razer",
+      "name": "Razer Peripherals & Software",
+      "driver_status": "oem_utility",
+      "winget_prefixes": [
+        "razerinc."
+      ],
+      "publisher_words": [
+        "razer"
+      ],
+      "name_patterns": [
+        "razer synapse",
+        "razer central",
+        "razer cortex",
+        "razer chroma"
+      ],
+      "summary": "Razer keyboards, mice, and USB headsets work via Linux kernel HID and USB audio drivers. Razer Synapse is Windows-only; independent open-source projects such as OpenRazer + Polychromatic or OpenRGB support lighting and DPI controls on many models (check each project's hardware compatibility list)."
+    },
+    {
+      "id": "hw-corsair",
+      "name": "Corsair Peripherals & RGB Software",
+      "driver_status": "oem_utility",
+      "publisher_words": [
+        "corsair"
+      ],
+      "name_patterns": [
+        "corsair icue",
+        "corsair utility engine"
+      ],
+      "summary": "Corsair keyboards, mice, and headsets work via standard Linux kernel HID and audio drivers. Corsair iCUE is Windows/macOS-only; independent open-source tools such as ckb-next and OpenRGB support lighting and key controls on many Corsair devices (check hardware compatibility lists)."
+    },
+    {
+      "id": "hw-asus-oem",
+      "name": "ASUS OEM Utilities (GlideX / Armoury Crate / MyASUS)",
+      "driver_status": "oem_utility",
+      "package_id_substrings": [
+        "b9eced6f."
+      ],
+      "publisher_words": [
+        "asustek"
+      ],
+      "name_patterns": [
+        "asus glidex",
+        "glidex service",
+        "armoury crate",
+        "myasus"
+      ],
+      "summary": "ASUS Windows companion utilities are Windows-only. For phone and cross-device continuity similar to GlideX, consider open-source KDE Connect or LocalSend on Linux; for supported ASUS laptops, the community asusctl tool manages fan profiles and keyboard lighting."
+    },
+    {
+      "id": "hw-laptop-oem",
+      "name": "Laptop OEM Control Center & Fn Hotkeys",
+      "driver_status": "oem_utility",
+      "package_id_substrings": [
+        "clevoco."
+      ],
+      "name_patterns": [
+        "fn hot keys and osd",
+        "control center package",
+        "lenovo vantage",
+        "hp support assistant",
+        "dell command",
+        "msi center",
+        "predatorsense",
+        "gigabyte control center"
+      ],
+      "summary": "Standard laptop hotkeys (brightness, volume, Wi-Fi) work natively through the Linux kernel ACPI/WMI subsystem. For Clevo/Tongfang fan and keyboard controls, check open-source Tuxedo Control Center or distribution-specific laptop utilities."
+    },
+    {
+      "id": "hw-keyboard-oem",
+      "name": "Custom Keyboard & Peripheral Drivers",
+      "driver_status": "oem_utility",
+      "name_patterns": [
+        "gk6xplus"
+      ],
+      "summary": "Standard typing and pointing work natively on Linux via kernel USB HID drivers. Proprietary Windows key-remapping utilities are Windows-only; consider open-source Input Remapper on Linux."
+    }
+  ],
+  "known_games": [
+    {
+      "id": "game-tft",
+      "name": "Teamfight Tactics",
+      "platform": "Riot Games",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "teamfight tactics",
+        "teamfighttactics"
+      ],
+      "note": "Requires Riot Vanguard (Windows kernel-mode anti-cheat), which is not supported on Linux or virtual machines. Do not attempt to bypass anti-cheat protections; use a supported Windows installation if you play this title."
+    },
+    {
+      "id": "game-lol",
+      "name": "League of Legends",
+      "platform": "Riot Games",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "league of legends",
+        "league_of_legends"
+      ],
+      "note": "Requires Riot Vanguard (Windows kernel-mode anti-cheat), which is not supported on Linux or virtual machines. Do not attempt to bypass anti-cheat protections; use a supported Windows installation if you play this title."
+    },
+    {
+      "id": "game-valorant",
+      "name": "Valorant",
+      "platform": "Riot Games",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "valorant"
+      ],
+      "note": "Requires Riot Vanguard (Windows kernel-mode anti-cheat), which is not supported on Linux or virtual machines. Do not attempt to bypass anti-cheat protections; use a supported Windows installation if you play this title."
+    },
+    {
+      "id": "game-fortnite",
+      "name": "Fortnite",
+      "platform": "Epic Games",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "fortnite"
+      ],
+      "note": "Does not support native Linux due to publisher anti-cheat policy. Do not attempt to bypass anti-cheat protections; consider supported cloud gaming services or a supported Windows installation."
+    },
+    {
+      "id": "game-destiny2",
+      "name": "Destiny 2",
+      "platform": "Steam",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "destiny 2"
+      ],
+      "note": "Publisher does not permit Linux or Steam Play / Proton access due to BattlEye anti-cheat policy. Do not attempt to bypass anti-cheat protections."
+    },
+    {
+      "id": "game-r6siege",
+      "name": "Rainbow Six Siege",
+      "platform": "Ubisoft",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "rainbow six siege"
+      ],
+      "note": "Online multiplayer uses BattlEye anti-cheat without Linux support per publisher policy. Do not attempt to bypass anti-cheat protections."
+    },
+    {
+      "id": "game-eafc",
+      "name": "EA Sports FC",
+      "platform": "EA",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "ea sports fc",
+        "fifa 23"
+      ],
+      "note": "Requires EA kernel-mode anti-cheat, which is not supported on Linux. Do not attempt to bypass anti-cheat protections."
+    },
+    {
+      "id": "game-apex",
+      "name": "Apex Legends",
+      "platform": "Steam",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "apex legends"
+      ],
+      "note": "Linux access is currently blocked per publisher anti-cheat policy. Do not attempt to bypass anti-cheat protections."
+    },
+    {
+      "id": "game-cod",
+      "name": "Call of Duty",
+      "platform": "PC Game",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "call of duty"
+      ],
+      "note": "Modern Call of Duty titles require RICOCHET kernel-level anti-cheat on Windows and are not supported on Linux. Do not attempt to bypass anti-cheat protections."
+    },
+    {
+      "id": "game-pubg",
+      "name": "PUBG: BATTLEGROUNDS",
+      "platform": "Steam",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "pubg: battlegrounds",
+        "playerunknown's battlegrounds"
+      ],
+      "note": "Online play is blocked on Linux by BattlEye / Zakynthos anti-cheat. Do not attempt to bypass anti-cheat protections."
+    },
+    {
+      "id": "game-tarkov",
+      "name": "Escape from Tarkov",
+      "platform": "PC Game",
+      "status": "anticheat_blocked",
+      "match_patterns": [
+        "escape from tarkov"
+      ],
+      "note": "Online raids use BattlEye anti-cheat without Linux support. Do not attempt to bypass anti-cheat protections."
+    },
+    {
+      "id": "game-gtav",
+      "name": "Grand Theft Auto V",
+      "platform": "Rockstar Games",
+      "status": "anticheat_caution",
+      "match_patterns": [
+        "grand theft auto v"
+      ],
+      "note": "Story Mode can run via Steam Proton / Wine, while GTA Online uses BattlEye anti-cheat which restricts Linux access per publisher policy. Verify current compatibility on ProtonDB and AreWeAntiCheatYet."
+    },
+    {
+      "id": "game-elden-ring",
+      "name": "ELDEN RING",
+      "platform": "PC Game",
+      "status": "check_protondb",
+      "match_patterns": [
+        "elden ring"
+      ],
+      "note": "Windows PC title — check community Proton compatibility reports on ProtonDB and multiplayer status on AreWeAntiCheatYet."
+    },
+    {
+      "id": "game-cyberpunk",
+      "name": "Cyberpunk 2077",
+      "platform": "PC Game",
+      "status": "check_protondb",
+      "match_patterns": [
+        "cyberpunk 2077"
+      ],
+      "note": "Single-player Windows title — check community Proton compatibility reports on ProtonDB."
+    },
+    {
+      "id": "game-rdr2",
+      "name": "Red Dead Redemption 2",
+      "platform": "Rockstar Games",
+      "status": "check_protondb",
+      "match_patterns": [
+        "red dead redemption 2"
+      ],
+      "note": "Windows PC title — check community Proton compatibility reports on ProtonDB and online status on AreWeAntiCheatYet."
+    },
+    {
+      "id": "game-bg3",
+      "name": "Baldur's Gate 3",
+      "platform": "PC Game",
+      "status": "check_protondb",
+      "match_patterns": [
+        "baldur's gate 3"
+      ],
+      "note": "Check community compatibility reports on ProtonDB (supports Vulkan/Proton on Linux)."
+    },
+    {
+      "id": "game-witcher3",
+      "name": "The Witcher 3",
+      "platform": "PC Game",
+      "status": "check_protondb",
+      "match_patterns": [
+        "the witcher 3"
+      ],
+      "note": "Single-player Windows title — check community Proton compatibility reports on ProtonDB."
+    },
+    {
+      "id": "game-helldivers2",
+      "name": "Helldivers 2",
+      "platform": "Steam",
+      "status": "check_protondb",
+      "match_patterns": [
+        "helldivers 2"
+      ],
+      "note": "Multiplayer title with anti-cheat — check current Linux compatibility on ProtonDB and AreWeAntiCheatYet."
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+name: Test & Build Releases
+
+on:
+  push:
+    branches: [main]
+    tags: ["v*"]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
+        with:
+          python-version: "3.12"
+      - name: Install Tk & GUI dependencies (Linux)
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y python3-tk xvfb
+      - name: Install Python dependencies
+        run: pip install "customtkinter==6.0.0"
+      - name: Run unit & security tests (Windows)
+        if: runner.os == 'Windows'
+        run: python -m unittest discover -s tests -v
+      - name: Run unit & security tests (Linux with Xvfb)
+        if: runner.os == 'Linux'
+        run: xvfb-run -a python -m unittest discover -s tests -v
+
+  build-binaries:
+    needs: test
+    strategy:
+      matrix:
+        include:
+          - os: windows-latest
+            binary_name: TuxHarbor-windows-x64
+            artifact_name: TuxHarbor-windows-x64.exe
+            add_data_spec: "tuxharbor/data;tuxharbor/data"
+            output_file: dist/TuxHarbor-windows-x64.exe
+          - os: ubuntu-latest
+            binary_name: TuxHarbor-linux-x64
+            artifact_name: TuxHarbor-linux-x64
+            add_data_spec: "tuxharbor/data:tuxharbor/data"
+            output_file: dist/TuxHarbor-linux-x64
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - uses: actions/setup-python@0b93645e9fea7318ecaed2b359559ac225c90a2b # v5.3.0
+        with:
+          python-version: "3.12"
+      - name: Install Linux Tk runtime
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y python3-tk
+      - name: Install pinned build dependencies
+        run: pip install "customtkinter==6.0.0" "pyinstaller==6.22.3"
+      - name: Build standalone windowed native binary
+        env:
+          BINARY_NAME: ${{ matrix.binary_name }}
+          ADD_DATA_SPEC: ${{ matrix.add_data_spec }}
+        shell: bash
+        run: |
+          pyinstaller \
+            --onefile \
+            --windowed \
+            --clean \
+            --noconfirm \
+            --name "$BINARY_NAME" \
+            --collect-all customtkinter \
+            --add-data "$ADD_DATA_SPEC" \
+            main.py
+      - name: Upload build artifact
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: ${{ matrix.artifact_name }}
+          path: ${{ matrix.output_file }}
+
+  release:
+    if: startsWith(github.ref, 'refs/tags/v')
+    needs: build-binaries
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@6b208ae046db98c579e8a3aa621ab581ff575935 # v4.1.1
+        with:
+          path: release-files
+          merge-multiple: true
+      - name: Generate SHA-256 Checksums
+        working-directory: release-files
+        run: sha256sum -- TuxHarbor-* > SHA256SUMS.txt
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@3bb12739c298aeb8a4eeaf626c5b8d85266b0e65 # v2.6.2
+        with:
+          generate_release_notes: true
+          files: release-files/*

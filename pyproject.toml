@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tuxharbor"
+version = "1.0.0"
+description = "Open-source Windows-to-Linux migration analyzer, alternative finder & automated setup generator"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10"
+keywords = ["linux", "windows", "migration", "flatpak", "desktop", "open-source"]
+dependencies = [
+  "customtkinter>=5.2",
+]
+
+[project.scripts]
+tuxharbor = "tuxharbor.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["tuxharbor*"]
+
+[tool.setuptools.package-data]
+tuxharbor = ["data/*.json"]
